@@ -1,0 +1,109 @@
+Page {
+  background-color: #181727;
+  color: white;
+}
+
+.address {
+  position: relative;
+  width: 100%;
+  line-height: 40rpx;
+  background-color: rgba(30, 29, 45, 100);
+}
+
+.top {
+  width: 94%;
+  height: 80rpx;
+  margin-left: 3%;
+  margin-top: 20rpx;
+  display: flex;
+  border: 1rpx solid #bbbbbb;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.dic {
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.dic_content {
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.dic_content_top {
+  display: flex;
+}
+
+.dic_content_bottom {
+  margin-top: 10rpx;
+  color: rgba(157, 158, 157, 100);
+  font-size: 24rpx;
+}
+
+.goods {
+  position: relative;
+  margin-top: 30rpx;
+  width: 100%;
+  line-height: 40rpx;
+  background-color: rgba(30, 29, 45, 100);
+}
+
+.good_content {
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.goods_title {
+  margin-left: 20rpx;
+  width: 450rpx;
+}
+
+.order {
+  position: relative;
+  margin-top: 30rpx;
+  width: 100%;
+  line-height: 40rpx;
+  background-color: rgba(30, 29, 45, 100);
+}
+
+.order_top {
+  margin-top: 20rpx;
+  width: 94%;
+  margin-left: 3%;
+  height: 90rpx;
+  border: 1rpx solid #bbbbbb;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 28rpx;
+}
+
+.list {
+  position: relative;
+  width: 96%;
+  height: 60rpx;
+  margin-left: 2%;
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.list_left {
+  position: absolute;
+  left: 20rpx;
+  color: rgba(153, 153, 153, 100);
+  font-size: 28rpx;
+}
+
+.list_right {
+  position: absolute;
+  right: 20rpx;
+  text-align: right;
+  color: rgba(153, 153, 153, 100);
+  font-size: 28rpx;
+}

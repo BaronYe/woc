@@ -1,0 +1,224 @@
+page {
+  background-color: #181727;
+  color: white;
+}
+
+.top {
+  position: absolute;
+  top: 0rpx;
+  width: 100%;
+  height: 10%;
+  background-color: rgba(30, 29, 45, 100);
+}
+
+.card_title {
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  color: rgba(255, 255, 255, 100);
+  font-size: 28rpx;
+}
+
+.card_bable {
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  width: 80rpx;
+  height: 40rpx;
+  color: #DF065E;
+  font-size: 28rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  border: 1rpx solid rgba(223, 6, 94, 100);
+}
+
+.box_money {
+  margin-left: 20rpx;
+  color: rgba(255, 0, 77, 100);
+  font-size: 36rpx;
+}
+
+.main {
+  position: absolute;
+  width: 100%;
+  height: 56%;
+  margin-left: 70rpx;
+  top: 13%;
+}
+
+.card {
+  width: 18%;
+  height: 36%;
+  margin-left: 30rpx;
+  margin-right: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.selected {
+  width: 19%;
+  height: 38%;
+  box-shadow: 0rpx 4rpx 12rpx 4rpx rgba(245, 241, 241, 0.4);
+  filter: contrast(120%) brightness(120%);
+}
+
+.button {
+  position: absolute;
+  top: 80%;
+  display: flex;
+  width: 100%;
+  height: 10%;
+}
+
+.button_red {
+  width: 220rpx;
+  height: 85rpx;
+  margin-left: 100rpx;
+  margin-right: 50rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 47, 87, 100);
+  text-align: center;
+}
+
+.button_yellow {
+  width: 220rpx;
+  height: 85rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 204, 0, 100);
+  text-align: center;
+}
+
+.bottom {
+  position: absolute;
+  top: 92.3%;
+  bottom: 0rpx;
+  margin-top: 32rpx;
+  width: 100%;
+  height: 5%;
+  background-color: white;
+  border-radius: 40rpx 40rpx 0rpx 0rpx;
+  display: flex;
+  border: 1rpx solid rgba(187, 187, 187, 100);
+}
+
+/* 遮罩 */
+.shadow {
+  width: 100%;
+  height: 100%;
+  z-index: 80;
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+/* 上滑高度 */
+.choosen {
+  width: 100%;
+  height: 53%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  z-index: 98;
+}
+
+/* 内容 */
+.container-box {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  color: #000;
+  width: 100%;
+  border-radius: 15rpx;
+  margin: 0 auto;
+  z-index: 98;
+}
+
+.money {
+  margin-top: 20rpx;
+  width: 100%;
+  display: flex;
+}
+
+.money_font {
+  margin-left: 30rpx;
+  width: 120rpx;
+  height: 40rpx;
+  color: rgba(105, 105, 105, 100);
+  font-size: 28rpx;
+}
+
+.pay_font {
+  color: rgba(105, 105, 105, 100);
+  font-size: 28rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.weixin {
+  display: flex;
+  margin-left: 60rpx;
+  margin-top: 20rpx;
+}
+
+.notice {
+  width: 670rpx;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  font-size: 28rpx;
+}
+
+.button_red1 {
+  width: 300rpx;
+  height: 95rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  border-radius: 100rpx;
+  box-shadow: 0rpx 4rpx 12rpx 4rpx rgba(0, 0, 0, 0.4);
+  background-color: #FF2F57;
+  text-align: center;
+}
+
+.button_yellow1 {
+  width: 300rpx;
+  height: 95rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  border-radius: 100rpx;
+  box-shadow: 0rpx 4rpx 12rpx 4rpx rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 204, 0, 100);
+  text-align: center;
+}
+
+/* 上滑高度 */
+.choosen1 {
+  width: 100%;
+  height: 40%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  z-index: 98;
+}
+
+.scroll-view {
+  white-space: nowrap;
+  margin-top: 30rpx;
+}
+
+.good_main {
+  margin-top: 30rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.scroll-image {
+  width: 300rpx;
+  height: 300rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 20rpx;
+}

@@ -1,0 +1,87 @@
+page {
+  background-color: #181727;
+  color: white;
+}
+
+
+.address {
+  position: relative;
+  width: 100%;
+  height: 120rpx;
+  margin-top: 20rpx;
+  display: flex;
+  border: 1rpx solid #C4C4C4;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.dic_content {
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.dic_content_top {
+  display: flex;
+}
+
+.dic_content_bottom {
+  margin-top: 10rpx;
+  color: rgba(157, 158, 157, 100);
+  font-size: 24rpx;
+}
+
+.bianji {
+  position: absolute;
+  right: 30rpx;
+  margin-top: 20rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.button {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 300rpx;
+  text-align: center;
+}
+
+.button_item {
+  width: 100%;
+  height: 100rpx;
+  background-color: #FF2F57;
+  color: rgba(255, 255, 255, 100);
+  font-size: 34rpx;
+  margin-top: 20rpx
+}
+
+/* 遮罩 */
+.shadow {
+  width: 100%;
+  height: 100%;
+  z-index: 80;
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+/* 上滑高度 */
+.choosen1 {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  z-index: 98;
+}
+
+.del {
+  text-align: center;
+  color: #000;
+  font-size: 36rpx;
+  margin-top: 40rpx;
+}

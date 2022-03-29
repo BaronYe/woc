@@ -1,0 +1,36 @@
+<view class="avatar">
+  <image class="user_avatar" src="{{userInfo.avatar}}" mode="scaleToFill" bindtap="change_image"></image>
+</view>
+<view class="list">
+  <view class="list_item">
+    <text class="list_item_font">昵称</text>
+    <text class="list_item_info" bindtap="tonickname">{{userInfo.nickname}}</text>
+    <image class="list_item_go" src="../../../images/mine/go.png" bindtap="tonickname"></image>
+  </view>
+  <view class="list_item">
+    <text class="list_item_font">性别</text>
+    <text class="list_item_info">{{userInfo.gender}}</text>
+    <image class="list_item_go" src="../../../images/mine/go.png"></image>
+  </view>
+  <view class="list_item">
+    <text class="list_item_font">生日</text>
+    <picker mode="date" value="{{date}}" start="1945-01-01" end="2021-01-01" bindchange="bindDateChange">
+      <text class="list_item_info">{{userInfo.birthday}}</text>
+      <image class="list_item_go" src="../../../images/mine/go.png"></image>
+    </picker>
+  </view>
+  <view class="list_item">
+    <text class="list_item_font">地区</text>
+    <text class="list_item_info">{{userInfo.localAddress}}</text>
+    <image class="list_item_go" src="../../../images/mine/go.png"></image>
+  </view>
+  <view class="list_item">
+    <text class="list_item_font">个人简介</text>
+    <text class="list_item_info" bindtap="todes">点击查看个人简介</text>
+    <image class="list_item_go" src="../../../images/mine/go.png" bindtap="todes"></image>
+  </view>
+  <view class="list_item" bindtap="toaddress">
+    <text class="list_item_font" >收获地址</text>
+    <image class="list_item_go" src="../../../images/mine/go.png"></image>
+  </view>
+</view>

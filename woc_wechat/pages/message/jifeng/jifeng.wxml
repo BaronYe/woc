@@ -1,0 +1,24 @@
+<view class="top">
+  <view class="count">{{point}}</view>
+  <view class="detail">
+    <view class="detail_font">1项积分可领取></view>
+    <view class="detail_button" bindtap="getall">一键领取</view>
+  </view>
+</view>
+<view class="bottom">
+  <view class="list_item" wx:for="{{list}}" wx:key="item">
+    <view class="list_item_top">
+      <view class="list_item_title">{{item.title}}</view>
+      <view class="list_item_count">+{{item.num}}</view>
+    </view>
+    <view class="list_item_bottom">
+      <view class="list_item_time">{{item.createTime}}</view>
+      <view class="list_item_button" wx:if="{{item.isGet <1}}">
+        <view style="margin-top:5rpx">
+          可领取
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="kong"></view>
+</view>

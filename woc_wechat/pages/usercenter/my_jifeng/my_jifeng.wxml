@@ -1,0 +1,24 @@
+<view class="top">
+  <view class="detail">
+    <view style="color: rgba(255, 255, 255, 100);font-size: 28rpx;margin-top:60rpx">当前积分</view>
+    <view style="color: rgba(255, 255, 255, 100);font-size: 96rpx;margin-left:20rpx">627</view>
+  </view>
+  <view style="display:flex">
+    <view class="button" bindtap="toshop">
+      <view style="padding-top:30rpx;padding-left:100rpx">积分商城</view>
+    </view>
+    <view class="button1" bindtap="toorder">
+      <view style="padding-top:30rpx;padding-left:100rpx">积分订单</view>
+    </view>
+  </view>
+</view>
+<view class="bottom">
+  <view style="margin-top:20rpx;margin-left:20rpx">积分明细</view>
+  <view class="list">
+    <view class="list_top">
+      <view class="detail">XXXgoumaile</view>
+      <view class="count">+</view>
+    </view>
+    <view class="list_bottom"></view>
+  </view>
+</view>

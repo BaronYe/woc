@@ -1,0 +1,43 @@
+page {
+  background-color: #181727;
+  color: white;
+}
+
+.card {
+  position: relative;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  width: 670rpx;
+  height: 400rpx;
+  border-radius: 10px;
+  background-color: rgba(30, 29, 45, 100);
+}
+
+.title {
+  position: relative;
+  top: 30rpx;
+  margin-left: 20rpx;
+  height: 40rpx;
+  color: rgba(255, 255, 255, 100);
+  font-size: 28rpx;
+  text-align: left;
+}
+
+.time {
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  width: 165rpx;
+  height: 40rpx;
+  color: rgba(153, 153, 153, 100);
+  font-size: 28rpx;
+  text-align: left;
+}
+
+.content {
+  width: 620rpx;
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  color: rgba(153, 153, 153, 100);
+  font-size: 28rpx;
+  word-wrap: break-word;
+}

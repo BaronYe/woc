@@ -1,0 +1,44 @@
+/* pages/component/coupon.wxss */
+.getRightNow{
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -145rpx;
+  left:200rpx;
+  width: 128rpx;
+  height: 52rpx;
+  border-radius: 34rpx;
+  background: #F6390D ;
+}
+.item_price{
+  margin-left: 20rpx;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.juan_border{
+  display: flex;
+
+width: 90%;
+height: 190rpx;
+background: #414345 ;
+border-radius: 15rpx;
+margin-top: 20rpx;
+
+}
+.item_left{
+  margin-left: 60rpx;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contrainer{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}

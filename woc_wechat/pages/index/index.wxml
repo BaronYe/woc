@@ -1,0 +1,247 @@
+<!--index.wxml-->
+<view class="search_view" bindtap="redirect">
+  <text class="search_text" bindtap="goToSearch">上海</text>
+  <image src="../../images/threejiao.png" class="search_image"></image>
+  <view class="search">
+    <image src="../../images/search.png" class="image_search"></image>
+    <input placeholder="快速搜索" class="search_input"></input>
+  </view>
+</view>
+<swiper indicator-dots="{{indicatorDots}}" class="swipe" autoplay="{{autoplay}}" circular="{{circular}}"
+  vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px"
+  next-margin="{{nextMargin}}px">
+  <block wx:for='{{images}}' wx:key='index'>
+    <swiper-item>
+      <image src='{{item.img}}' mode='aspectFill' class='swiper-item-images' />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="item_select">
+  <view class="item">
+    <view class="circle" bindtap="goTONearBy">
+
+      <image src="../../images/dingwei.png" class="image1"></image>
+    </view>
+    <view class="item_text" bindtap="goTONearBy">附近打卡</view>
+  </view>
+  <view class="item" bindtap="goTOFunuy">
+    <view class="circle" style="background-color: #B54408 ">
+
+      <image src="../../images/haowan.png" class="image1" bindtap="goTOFunuy"></image>
+    </view>
+    <view class="item_text">潮好玩</view>
+  </view>
+  <view class="item" bindtap="tobox">
+    <view class="circle" style="background-color: #8AC799  ">
+      <image src="../../images/manghe.png" class="image1"></image>
+    </view>
+    <view class="item_text">盲盒</view>
+  </view>
+  <view class="item" bindtap="goTOCoupon">
+    <view class="circle" style="background-color: #FF8B16   ">
+
+      <image src="../../images/youhuijuan.png" class="image1"></image>
+    </view>
+    <view class="item_text">优惠券</view>
+  </view>
+</view>
+<view class="community">
+  <view class="user_select_item">
+    <view class="demo">
+      <view class="{{isfoller==false?'item_text':'item_text_bold'}}" bindtap="setFoller">关注</view>
+      <view class="{{isrecommend==false?'item_text':'item_text_bold'}}" bindtap="setRecommend">推荐</view>
+      <view class="{{ishere==false?'item_text':'item_text_bold'}}" bindtap="setHere">附近</view>
+    </view>
+    <view wx:if="{{isfoller==true}}">
+      <scroll-view>
+        <view wx:for="{{user_information}}" wx:for-index='key' wx:for-item='item'>
+          <view class="box_all">
+            <view class="header">
+              <image src="{{item.users.avatar}}" class="user_image"></image>
+              <view class="user_view">
+                <view style="font-size:27rpx ; color: #FFFFFF  ;">{{item.users.nickname}}</view>
+                <view style="font-size:20rpx ; color: #A9ABAE  ;margin-top:5rpx;width: 180rpx;">{{item.createTime}}
+                </view>
+              </view>
+              <view wx:if="{{item.isfoller==false}}" class="follow_button" id="{{item.userId}}" bindtap="changeFoller"
+                data-tid="{{key}}">
+                <view>关注</view>
+              </view>
+              <view wx:else class="follow_button" bindtap="changeFoller"
+                style="border: 1px solid #D5D5D5;color: #AAAAAA;" id="{{item.userId}}" data-tid="{{key}}">
+                <view>已关注</view>
+
+              </view>
+            </view>
+            <view class="body">
+              <text class="text_area" style="margin-left:40rpx">{{item.content}}</text>
+              <scroll-view scroll-x="true">
+                <view class="images_list">
+                  <view wx:for="{{item.imgs}}">
+
+                    <image src="{{item}}" style=" width: 195rpx;height: 195rpx;border-radius: 10rpx;margin-left:20rpx">
+                    </image>
+                  </view>
+                </view>
+              </scroll-view>
+
+              <view
+                style="font-size:26rpx ; color: #4A65C3   ;margin-top:20rpx ; margin-right: 440rpx;margin-left:40rpx">
+                {{item.address}}
+              </view>
+
+            </view>
+            <view class="tail">
+              <view class="tail_button">
+                <image src="../../images/zhuanfa.png" style="width:40rpx;height:40rpx;"></image>
+
+              </view>
+              <view class="tail_button" bindtap="goto_Comment" id="{{item.id}}">
+                <image src="../../images/liaotian.png" style="width:50rpx;height:50rpx;"></image>
+                <view style="font-size:20rpz;color:#A9ABAE ">{{item.commentCount}}</view>
+
+              </view>
+              <view class="tail_button" bindtap="zan" id="{{item.id}}">
+                <view wx:if="{{item.isZan==0}}">
+                  <image src="../../images/dianzan.png" style="width:60rpx;height:60rpx;"></image>
+                </view>
+                <view wx:else>
+                  <image src="../../images/zanreday.png" style="width:60rpx;height:60rpx;"></image>
+                </view>
+                <view style="font-size:20rpz;color:#A9ABAE ">{{item.zanCount}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view wx:if="{{isrecommend==true}}">
+
+      <scroll-view>
+        <view wx:for="{{user_information}}" wx:for-index='key' wx:for-item='item'>
+          <view class="box_all">
+            <view class="header">
+              <image src="{{item.users.avatar}}" class="user_image"></image>
+              <view class="user_view">
+                <view style="font-size:27rpx ; color: #FFFFFF  ;">{{item.users.nickname}}</view>
+                <view style="font-size:20rpx ; color: #A9ABAE  ;margin-top:5rpx;width: 180rpx;">{{item.createTime}}
+                </view>
+              </view>
+              <view wx:if="{{item.isfoller==false}}" class="follow_button" id="{{item.userId}}" bindtap="changeFoller"
+                data-tid="{{key}}">
+                <view>关注</view>
+              </view>
+              <view wx:else class="follow_button" bindtap="changeFoller"
+                style="border: 1px solid #D5D5D5;color: #AAAAAA;" id="{{item.userId}}" data-tid="{{key}}">
+                <view>已关注</view>
+
+              </view>
+            </view>
+            <view class="body">
+              <text class="text_area" style="margin-left:40rpx">{{item.content}}</text>
+              <scroll-view scroll-x="true">
+                <view class="images_list">
+                  <view wx:for="{{item.imgs}}">
+
+                    <image src="{{item}}" style=" width: 195rpx;height: 195rpx;border-radius: 10rpx;margin-left:20rpx">
+                    </image>
+                  </view>
+                </view>
+              </scroll-view>
+
+              <view
+                style="font-size:26rpx ; color: #4A65C3   ;margin-top:20rpx ; margin-right: 440rpx;margin-left:40rpx">
+                {{item.address}}
+              </view>
+
+            </view>
+            <view class="tail">
+              <view class="tail_button" bindtap="delete" data-index="{{item.id}}">
+                <image src="../../images/zhuanfa.png" style="width:40rpx;height:40rpx;"></image>
+              </view>
+              <view class="tail_button" bindtap="goto_Comment" id="{{item.id}}">
+                <image src="../../images/liaotian.png" style="width:50rpx;height:50rpx;"></image>
+                <view style="font-size:20rpz;color:#A9ABAE ">{{item.commentCount}}</view>
+
+              </view>
+              <view class="tail_button" bindtap="zan" id="{{item.id}}">
+                <view wx:if="{{item.isZan==0}}">
+                  <image src="../../images/dianzan.png" style="width:60rpx;height:60rpx;"></image>
+                </view>
+                <view wx:else>
+                  <image src="../../images/zanreday.png" style="width:60rpx;height:60rpx;"></image>
+                </view>
+                <view style="font-size:20rpz;color:#A9ABAE ">{{item.zanCount}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+
+    </view>
+    <view wx:if="{{ishere==true}}">
+      <scroll-view>
+        <view wx:for="{{user_information}}" wx:for-index='key' wx:for-item='item'>
+          <view class="box_all">
+            <view class="header">
+              <image src="{{item.users.avatar}}" class="user_image"></image>
+              <view class="user_view">
+                <view style="font-size:27rpx ; color: #FFFFFF  ;">{{item.users.nickname}}</view>
+                <view style="font-size:20rpx ; color: #A9ABAE  ;margin-top:5rpx;width: 180rpx;">{{item.createTime}}
+                </view>
+              </view>
+              <view wx:if="{{item.isfoller==false}}" class="follow_button" id="{{item.userId}}" bindtap="changeFoller"
+                data-tid="{{key}}">
+                <view>关注</view>
+              </view>
+              <view wx:else class="follow_button" bindtap="changeFoller"
+                style="border: 1px solid #D5D5D5;color: #AAAAAA;" id="{{item.userId}}" data-tid="{{key}}">
+                <view>已关注</view>
+
+              </view>
+            </view>
+            <view class="body">
+              <text class="text_area" style="margin-left:40rpx">{{item.content}}</text>
+              <scroll-view scroll-x="true">
+                <view class="images_list">
+                  <view wx:for="{{item.imgs}}">
+
+                    <image src="{{item}}" style=" width: 195rpx;height: 195rpx;border-radius: 10rpx;margin-left:20rpx">
+                    </image>
+                  </view>
+                </view>
+              </scroll-view>
+
+              <view
+                style="font-size:26rpx ; color: #4A65C3   ;margin-top:20rpx ; margin-right: 440rpx;margin-left:40rpx">
+                {{item.address}}
+              </view>
+
+            </view>
+            <view class="tail">
+              <view class="tail_button">
+                <image src="../../images/zhuanfa.png" style="width:40rpx;height:40rpx;"></image>
+
+              </view>
+              <view class="tail_button" bindtap="goto_Comment" id="{{item.id}}">
+                <image src="../../images/liaotian.png" style="width:50rpx;height:50rpx;"></image>
+                <view style="font-size:20rpz;color:#A9ABAE ">{{item.commentCount}}</view>
+
+              </view>
+              <view class="tail_button" bindtap="zan" id="{{item.id}}">
+                <view wx:if="{{item.isZan==0}}">
+                  <image src="../../images/dianzan.png" style="width:60rpx;height:60rpx;"></image>
+                </view>
+                <view wx:else>
+                  <image src="../../images/zanreday.png" style="width:60rpx;height:60rpx;"></image>
+                </view>
+                <view style="font-size:20rpz;color:#A9ABAE ">{{item.zanCount}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

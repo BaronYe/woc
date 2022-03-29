@@ -1,0 +1,47 @@
+<view class="address">
+  <view class="top">
+    <image src="../../../../images/mine/time.png" style="width:50rpx;height:50rpx;margin-left:20rpx;margin-top:20rpx;">
+    </image>
+    <view style="color: rgba(255, 255, 255, 100);font-size: 40rpx;margin-left:40rpx">待发货</view>
+  </view>
+  <view class="dic">
+    <image src="../../../../images/mine/dic.png" style="width:50rpx;height:50rpx;margin-left:20rpx"></image>
+    <view class="dic_content">
+      <view class="dic_content_top">
+        <view>{{order.address.receiverName}}</view>
+        <view style="margin-left:20rpx">{{order.address.receiverMobile}}</view>
+      </view>
+      <view class="dic_content_bottom">{{order.address.receiverProvince}} {{order.address.receiverCity}}
+        {{order.address.receiverRegion}}{{order.address.receiverDetailed}}</view>
+    </view>
+  </view>
+</view>
+<view class="goods">
+  <view class="good_content">
+    <image src="{{order.item.spescImg}}" style="width:200rpx;height:200rpx"></image>
+    <view class="goods_title">
+      <view style="font-size: 32rpx;width:450rpx;height:100rpx;">{{order.item.iName}}</view>
+      <view style="font-size: 24rpx;width:450rpx;height:50rpx;color:#B7B6B6">{{order.item.spesc}}</view>
+      <view style="position:absolute;text-algin:right;right:80rpx;color: rgba(230, 11, 48, 100);font-size: 32rpx;">
+        {{order.orderMoney}}元</view>
+    </view>
+  </view>
+</view>
+<view class="order">
+  <view class="order_top">
+    <view style="color: rgba(255, 255, 255, 100);font-size: 28rpx;padding-top:30rpx;margin-left:10rpx;">详细信息</view>
+  </view>
+  <view class="list">
+    <view class="list_left">订单编号</view>
+    <view class="list_right">{{order.orderNo}}</view>
+  </view>
+  <view class="list">
+    <view class="list_left">成交方式</view>
+    <view wx:if="{{order.paymentType < 1}}" class="list_right">余额支付</view>
+    <view wx:elif="{{order.paymentType > 0}}" class="list_right">微信支付</view>
+  </view>
+  <view class="list">
+    <view class="list_left">下单时间</view>
+    <view class="list_right">{{order.payTime}}</view>
+  </view>
+</view>

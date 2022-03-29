@@ -1,0 +1,44 @@
+<view class="goods">
+  <view class="good_content">
+    <image src="{{good.boxCover}}" style="width:200rpx;height:200rpx;margin-left:10rpx;"></image>
+    <view class="goods_title">
+      <view style="font-size: 32rpx;width:450rpx;height:50rpx;">{{good.title}}</view>
+      <view style="font-size: 28rpx;color: rgba(183, 182, 182, 100);width:450rpx;height:80rpx;">{{good.content}}</view>
+      <view style="color: rgba(230, 11, 48, 100);font-size: 28rpx;">￥{{good.price}}</view>
+    </view>
+  </view>
+</view>
+<view class="address">
+  <view class="address_top" bindtap="toaddress">
+    <view style="color: rgba(255, 255, 255, 100);font-size: 32rpx;margin-top:15rpx;">收货地址</view>
+    <image class="go" src="../../../../images/mine/go.png"></image>
+  </view>
+  <view class="dic">
+    <image src="../../../../images/mine/dic.png" style="width:50rpx;height:50rpx;"></image>
+    <view class="dic_content">
+      <view class="dic_content_top">
+        <view>{{address.name}}</view>
+        <view style="margin-left:20rpx">{{address.mobile}}</view>
+      </view>
+      <view class="dic_content_bottom">{{address.province}} {{address.city}}
+        {{address.region}}{{address.detailed}}</view>
+    </view>
+  </view>
+</view>
+<view class="pay">
+  <view class="pay_font">支付方式：</view>
+  <radio-group bindchange="radioChange">
+    <label class="weixin">
+      <image src="../../../../images/box/weixin.png" style="width:50rpx;height:50rpx;"></image>
+      <view style="margin-left:20rpx">微信支付</view>
+      <radio style="position:absolute;right:20rpx" value="1" checked="true" />
+    </label>
+    <label class="weixin">
+      <view>使用余额支付（当前可用余额{{balance}}）</view>
+      <radio style="position:absolute;right:20rpx" value="0" checked="" />
+    </label>
+  </radio-group>
+</view>
+<view class="button" bindtap="todingdan">
+  <view style="color: rgba(255, 255, 255, 100);font-size: 34rpx;margin-top:24rpx">确认订单</view>
+</view>

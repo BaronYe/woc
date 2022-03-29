@@ -1,0 +1,6 @@
+<form bindsubmit="formSubmit">
+  <view class="input_containt">
+    <input name="input" class="input" maxlength="10" placeholder="请输入新昵称"/>
+  </view>
+  <button class="save" type="warn" formType="submit">保存</button>
+</form>

@@ -1,0 +1,21 @@
+<!--pages/index/map/map.wxml-->
+<view class="contranier">
+<view class="search_view">
+<text class="search_text" >上海</text>
+<image src="../../../images/threejiao.png" class="search_image"></image>
+<view class="search">
+<image src="../../../images/search.png" class="image_search"></image>
+<input placeholder="快速搜索" class="search_input"></input>
+</view>
+</view>
+<view wx:for="{{mapInformation}}"  >
+
+<view class="image-parent">
+	<image src="{{item.img}}" mode="aspectFill" class="image"></image>
+	 <view class="child">{{item.name}}</view>
+</view>
+
+
+
+</view> 
+</view>

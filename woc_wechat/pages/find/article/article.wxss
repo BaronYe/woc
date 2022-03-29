@@ -1,0 +1,86 @@
+/* pages/find/article/article.wxss */
+page {
+  background-color: black;
+  color: white;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 40rpx;
+  background: #B7B6B6;
+  top: 350rpx;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.information {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 200rpx;
+  margin-top: 40rpx;
+
+}
+
+.item {
+  margin-top: 10rpx;
+  display: flex;
+
+  align-items: center;
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+
+}
+
+.article {
+  margin-top: 20rpx;
+  display: flex;
+  font-size: 26rpx;
+
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  letter-spacing: 5rpx;
+  line-height: 38rpx;
+
+
+
+}
+
+.mid {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 180rpx;
+  margin-top: 10rpx;
+}
+
+.mid_item {
+  align-items: center;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 260rpx;
+  height: 160rpx;
+  background: #414345;
+  border-radius: 10rpx;
+}
+
+.rich-img {
+  width: 100%;
+  margin: 20rpx 0;
+}
+
+.rich-p {
+  color: white;
+  font-size: 32rpx;
+  line-height: 45rpx;
+}

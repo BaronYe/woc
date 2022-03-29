@@ -1,0 +1,35 @@
+<!--pages/component/coupon.wxml-->
+<view class="contrainer">
+<view class="juan_border">
+<view class="item_price">
+<view style="color:#F44444 ;font-size: 32rpx; font-weight: bold;">￥{{price}}</view>
+<view style="color:#B7B7B7 ;font-size: 24rpx; margin-top: 20rpx;">满{{max}}元可用</view>
+</view>
+<view class="item_left">
+<view style="color:#F44444  ;font-size: 32rpx; font-weight: bold;">优惠券</view>
+<wxs module="filter" src="../../utils/filter.wxs"></wxs>
+<view style="color:#B7B7B7;font-size: 24rpx;margin-top: 20rpx;">有效期：{{filter.formatTime(startTime,"YYYY-MM-dd")}} - {{filter.formatTime(endTime,"YYYY-MM-dd")}}</view>
+</view>
+</view>
+<!-- 判断一下ifget 0 -1 ，1 -->
+<view wx:if="{{ifget==-1}}">
+<view class="getRightNow">
+<view bindtap="get">立即领取</view>
+</view>
+</view>
+<view wx:if="{{ifget==0}}">
+<view class="getRightNow" style="background:#F8F8F8  ;">
+<view bindtap="use" style="color:#000">去使用</view>
+</view>
+</view>
+<view wx:if="{{ifget==1}}">
+<view class="getRightNow" style="background:#F8F8F8  ;">
+<view  style="color:#000">已使用</view>
+</view>
+</view>
+<view wx:if="{{ifget==2}}">
+<view class="getRightNow" style="background:#F8F8F8  ;">
+<view  style="color:#000">已过期</view>
+</view>
+</view>
+</view>

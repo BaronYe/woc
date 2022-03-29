@@ -1,0 +1,97 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/find/find",
+    "pages/usercenter/usercenter",
+    "pages/message/message",
+    "pages/release/release",
+    "pages/usercenter/my_money/my_money",
+    "pages/usercenter/user_info/user_info",
+    "pages/usercenter/user_info/user_info_nickname/user_info_nickname",
+    "pages/usercenter/user_info/user_info_des/user_info_des",
+    "pages/usercenter/user_info/user_info_address/user_info_address",
+    "pages/usercenter/my_money/my_money_main/my_money_main",
+    "pages/usercenter/my_money/my_money_ti/my_money_ti",
+    "pages/usercenter/my_release/my_release",
+    "pages/message/zan/zan",
+    "pages/message/follow/follow",
+    "pages/message/pinglun/pinglun",
+    "pages/message/xitong/xitong",
+    "pages/message/shangping/shangping",
+    "pages/message/jifeng/jifeng",
+    "pages/usercenter/my_collect/my_collect",
+    "pages/usercenter/my_set/my_set",
+    "pages/usercenter/my_jifeng/my_jifeng",
+    "pages/index/map/map",
+    "pages/find/article/article",
+    "pages/index/shop/shop",
+    "pages/index/box/box",
+    "pages/index/box_shop/box_shop",
+    "pages/usercenter/my_jifeng/jifeng_shop/jifeng_shop",
+    "pages/usercenter/my_jifeng/jifeng_shop/shop_detail/shop_detail",
+    "pages/usercenter/my_jifeng/jifeng_shop/shop_order/shop_order",
+    "pages/address/address_list/address_list",
+    "pages/usercenter/my_order/my_order",
+    "pages/usercenter/my_jifeng/jifeng_order/jifeng_order",
+    "pages/index/box/box_detail/box_detail",
+    "pages/index/box/box_on/box_on",
+    "pages/address/address_form/address_form",
+    "pages/index/box/box_order/box_order",
+    "pages/index/box_shop/box_shop_detail/box_shop_detail",
+    "pages/index/coupon/coupon_page",
+    "pages/index/ercode/ercode",
+    "pages/index/comment/comment",
+    "pages/search/search",
+    "pages/usercenter/my_jifeng/jifeng_detail/jifeng_detail"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ffffff",
+    "borderStyle": "black",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/home_no.png",
+        "selectedIconPath": "images/icon/home_on.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "images/icon/find_no.png",
+        "selectedIconPath": "images/icon/find_on.png"
+      },
+      {
+        "pagePath": "pages/release/release",
+        "iconPath": "images/icon/release.png",
+        "selectedIconPath": "images/icon/release_on.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "images/icon/notice_no.png",
+        "selectedIconPath": "images/icon/notice_on.png"
+      },
+      {
+        "pagePath": "pages/usercenter/usercenter",
+        "text": "我的",
+        "iconPath": "images/icon/mine_no.png",
+        "selectedIconPath": "images/icon/mine_on.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

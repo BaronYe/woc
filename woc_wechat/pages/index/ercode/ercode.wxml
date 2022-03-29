@@ -1,0 +1,5 @@
+<!--pages/index/ercode/ercode.wxml-->
+<view class="all">
+<canvas style="width: 200px; height: 200px;margin-top: 200rpx;" canvas-id="myQrcode"></canvas>
+<button style="width:100rpx;height:100rpx" bindtap="scan">打开相机</button>
+</view>

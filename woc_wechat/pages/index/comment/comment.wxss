@@ -1,0 +1,218 @@
+page{
+  background-color: black;
+  color: white;
+  }
+.swiper-item-images{
+  width: 100%;
+  height: 450rpx;
+
+}
+.swipe{
+
+ 
+  height: 450rpx;
+ 
+}
+.swiper_container {
+  background-color:black;
+  height: 120rpx;
+  width: 100%;
+  }
+  
+  .swiper_item {
+        
+    height: 100rpx;
+    width: 100%;
+    margin-left: 25rpx;
+ margin-right: 20rpx;
+ margin-top: 33rpx;
+
+  font-size: 25rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: serif;
+  }
+  .head{
+    margin-top: 20rpx;
+    display: flex;
+  /* border: 1rpx solid #F7C709; */
+  height: 135rpx;
+  width: 100%;
+  align-items: center;
+  }
+  .follow_button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120rpx;
+    height: 50rpx;
+    line-height: 40rpx;
+    border-radius: 40rpx;
+    background-color: #000000;
+    color: #ff0000;
+    font-size: 28rpx;
+    text-align: center;
+    font-family: Arial;
+    border: 1px solid rgba(255, 0, 0, 100);
+     position: absolute;
+     left: 570rpx;
+  
+  }
+  .textarea{
+    left: 40px;
+top: 3px;
+width: 348px;
+height: 40px;
+color: rgba(255, 255, 255, 100);
+font-size: 14px;
+text-align: left;
+  }
+  .body{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .body_middle{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .user_image{
+    width: 75rpx;
+    height: 75rpx;
+    border-radius: 40rpx;
+    margin-left: 40rpx;
+  }
+  .tail {
+    margin-top: 10rpx;
+  
+    display: flex;
+    justify-content: space-around;
+    height: 100rpx;
+    width: 100%;
+    background-color: #000000;
+    /* border: 1rpx solid #F7C709; */
+  }
+  
+  .tail_button {
+    display: flex;
+    align-items: center;
+  }
+  .comment_item{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 30rpx;
+  }
+  .child_comment{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 30rpx;
+  }
+  .user_avatar{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 42rpx;
+    margin-left: 40rpx;
+
+  }
+  .box{
+    display: flex;
+ flex-direction:column;
+ height:100vh;
+ overflow:hidden;
+  }
+  .box-scroll{
+    flex: 1;
+    height: 1px;
+  }
+  .child_user_avatar{
+    width: 48rpx;
+    height: 48rpx;
+    border-radius: 42rpx;
+   
+  }
+  .right_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15rpx;
+    width: 500rpx;
+
+  }
+  .buttom_item{
+    display: flex;
+    align-items: center;
+    margin-top: 10rpx;
+  }
+  .star_image{
+  
+    width: 50rpx;
+height: 50rpx;
+
+  }
+  .star{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 50rpx;
+   
+
+    
+
+
+  }
+  .child_star{
+    display: flex;
+    align-items: center;
+    position: relative;
+top: -100rpx;
+left: 440rpx;
+  }
+  .child_right_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15rpx;
+    width: 400rpx;
+
+  }
+  .fix_buttom{
+    position: fixed;
+  left: 0;
+  bottom: 30rpx;
+  width: 100%;
+  height: 50rpx;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .input{
+    width: 90%;
+    height: 90rpx;
+    border-radius: 20rpx;
+    border: white 1rpx solid;
+    display: flex;
+align-items: center;
+background: #000;
+
+
+  }
+  .submit{
+    color: #fff;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width: 100rpx;
+    height: 50rpx;
+    background: #1ABDE6;
+    border-radius: 15rpx;
+    margin-left: 180rpx;
+    font-size: 30rpx;
+  
+  
+  }

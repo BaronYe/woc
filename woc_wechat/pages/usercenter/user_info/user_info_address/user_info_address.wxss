@@ -1,0 +1,61 @@
+page {
+  background-color: black;
+}
+
+.list {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 5%;
+}
+
+.list_item {
+  position: relative;
+  width: 94%;
+  height: 70rpx;
+  margin-top: 30rpx;
+  margin-left: 3%;
+  color: white;
+  border: 1rpx solid lightgray;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.list_item_font {
+  margin-left: 15rpx;
+  margin-top: 10rpx;
+  width: 118px;
+  height: 24px;
+  color: rgba(255, 255, 255, 100);
+  font-size: 34rpx;
+}
+
+.list_item_info {
+  position: absolute;
+  right: 8%;
+  color: rgba(153, 153, 153, 100);
+  font-size: 14px;
+  top: 5rpx;
+}
+
+form {
+  margin-top: 30rpx;
+}
+
+.btn-area {
+  position: absolute;
+  top: 60%;
+  left: 25%;
+}
+
+.get_button {
+  position: relative;
+  height: 70rpx;
+  margin-top: 30rpx;
+  color: #FFFFFF;
+  background-color: rgba(244, 68, 68, 100);
+  border-radius: 20rpx;
+  font-size: 14px;
+  text-align: center;
+}

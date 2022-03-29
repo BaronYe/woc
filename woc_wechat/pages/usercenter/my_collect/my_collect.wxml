@@ -1,0 +1,49 @@
+<view class="tabs">
+  <view class="tab">
+    <!-- 选项卡 -->
+    <block wx:for="{{['店铺','活动']}}" wx:key="id">
+      <view class="tab_item {{currentTabIndex == index? 'selected' : ''}}" bindtap='onTabItemTap'
+        data-index='{{index}}'>
+        {{item}}
+      </view>
+    </block>
+  </view>
+  <view class="item_detail">
+    <!-- 店铺列表 -->
+    <view class="list" hidden="{{currentTabIndex != 0}}" wx:for="{{shop}}">
+      <view class="item">
+        <image src="{{item.image}}"
+          style="margin-top:10rpx;width:220rpx;height:200rpx;border-radius: 5rpx;margin-left:20rpx"></image>
+        <view class="item_left">
+          <view style="color:#fff;margin-top:10rpx;margin-left: 25rpx;">{{item.name}}</view>
+          <view class="text_image" style="">
+            <image src="../../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+            <image src="../../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+            <image src="../../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+            <image src="../../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+            <view style="color:#999998;width:auto;height:34rpx">￥{{item.price}}/人</view>
+          </view>
+          <view style="color:#999998;width:auto;height:34rpx;font-size: 24rpx;margin-left: 25rpx; margin-top: 8rpx;">
+            {{item.fromTime}} 至 {{item.toTime}} 开放</view>
+          <view style="color:#F44444 ;font-size: 12px;;margin-left: 25rpx; margin-top: 6rpx;">{{item.address}}</view>
+        </view>
+        <view class="item_right">
+          <image class="item_right_img" src="../../../images/mine/colloct_on.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 活动列表 -->
+  <view class="list" hidden="{{currentTabIndex != 1}}" wx:for="{{action}}">
+    <view class="item">
+      <image src="{{item.image}}" style="width:220rpx;height:160rpx;border-radius: 5rpx;margin-left:20rpx"></image>
+      <view class="item_left">
+        <view style="color:#fff;width:250rpx;height:100rpx;margin-top:20rpx;margin-left: 25rpx;">{{item.title}}</view>
+        <view style="color:#B7B6B6;font-size:28rpx;;margin-left: 25rpx; margin-top: 2rpx;">{{item.time}}</view>
+      </view>
+      <view class="item_right">
+        <image class="item_right_img" src="../../../images/mine/colloct_on.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

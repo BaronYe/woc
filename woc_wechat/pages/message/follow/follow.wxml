@@ -1,0 +1,43 @@
+<view class="tabs">
+  <view class="tab">
+    <!-- 选项卡 -->
+    <block wx:for="{{['关注','粉丝']}}" wx:key="id">
+      <view class="tab_item {{currentTabIndex == index? 'selected' : ''}}" bindtap='onTabItemTap'
+        data-index='{{index}}'>
+        {{item}}
+      </view>
+    </block>
+  </view>
+  <view class="item_detail">
+    <!-- 关注列表 -->
+    <view class="list" hidden="{{currentTabIndex != 0}}" wx:for="{{follow}}">
+      <view class="list_item">
+        <image class="list_item_image" src="{{item.followUser.avatar}}"></image>
+        <view class="list_item_font">
+          <view class="list_item_font1">{{item.followUser.nickname}}</view>
+          <view class="list_item_font2">你关注了</view>
+        </view>
+        <wxs module="filter" src="../../../utils/filter.wxs"></wxs>
+        <text class="list_item_time">{{filter.formatTime(item.time,'MM-dd')}}</text>
+        <view class="guanzhu">
+          <view style="margin-top:10rpx">取关</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 粉丝列表 -->
+  <view class="list" hidden="{{currentTabIndex != 1}}" wx:for="{{followed}}">
+    <view class="list_item">
+      <image class="list_item_image" src="{{item.user.avatar}}"></image>
+      <view class="list_item_font">
+        <view class="list_item_font1">{{item.user.nickname}}</view>
+        <view class="list_item_font2">关注了你</view>
+      </view>
+      <wxs module="filter" src="../../../utils/filter.wxs"></wxs>
+      <text class="list_item_time">{{filter.formatTime(item.time,'MM-dd')}}</text>
+      <view class="guanzhu">
+        <view style="margin-top:10rpx">回粉</view>
+      </view>
+    </view>
+  </view>
+</view>

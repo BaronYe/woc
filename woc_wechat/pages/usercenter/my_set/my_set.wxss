@@ -1,0 +1,40 @@
+Page {
+  background-color: #181727;
+  color: white;
+}
+
+.list {
+  position: relative;
+  width: 96%;
+  left: 2%;
+  top: 20rpx;
+  bottom: 20rpx;
+  display: flex;
+}
+
+.list_left {
+  color: rgba(153, 153, 153, 100);
+  font-size: 32rpx;
+}
+
+.list_right {
+  position: absolute;
+  right: 10rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.button {
+  position: relative;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+  width: 660rpx;
+  height: 110rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: #3a3a44;
+  color: rgba(255, 255, 255, 100);
+  text-align: center;
+  font-size: 32rpx;
+  text-align: center;
+}

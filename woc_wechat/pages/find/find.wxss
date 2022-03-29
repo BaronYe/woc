@@ -1,0 +1,164 @@
+page{
+background-color: black;
+color: white;
+}
+.search_view{
+  display: flex;
+  height: 80rpx;
+  width: 100%;
+  background-color: #000000;
+}
+.search_text{
+  align-items: center;
+  margin-left: 10rpx;
+  color: #fff;
+  width: auto;
+  height: 35rpx;
+}
+.search_image{
+  margin-top: 12rpx;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10rpx;
+  width: 23rpx;
+  height: 23rpx;
+}
+.search{
+  align-items: center;
+  margin-left: 15rpx;
+  width: 600rpx;
+  height: 60rpx;
+  background-color: white;
+  display: flex;
+}
+.image{
+  width: 300rpx;
+  height: 160rpx;
+  margin-left: 15rpx;
+
+}
+.image_search{
+  align-items: center;
+  margin-left: 15rpx;
+  width: 28rpx;
+  height: 28rpx;
+}
+.search_input{
+ 
+  margin-left: 20rpx;
+  font-size: 25rpx;
+  color: #CCCCCC;
+ 
+  width: 450rpx;
+}
+.Tips{
+  display: flex;
+  justify-content: space-between;
+  background: #000;
+  height: 70rpx;
+  color: #fff;
+  font-size: 40rpx;
+  padding-right: 35rpx;
+  padding-left: 25rpx;
+  font-weight: bold;
+  padding-top: 15rpx;
+
+
+
+
+
+
+
+}
+.item{
+  display:flex;
+  width:600rpx;
+  height:180rpx;
+  background: #000000;
+  
+}
+.right_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+scroll-view {
+  width: 100%;
+  white-space: nowrap;
+}
+.topic{
+  position: absolute;
+  width: 180rpx;
+  height: 60rpx;
+  background: #5BAA0E ;
+  left: 15rpx;
+  top: 0px;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rank_item{
+  display: flex;
+width: 100%;
+height: 220rpx;
+
+}
+.rank_right_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30rpx;
+
+}
+.item-content {
+  display: flex;
+  flex-direction: row;
+  margin-top:10rpx;
+  
+ 
+ 
+
+}
+.item-new{
+  display: flex;
+  flex-direction: column;
+}
+.No{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 25rpx;
+  right: 20rpx;
+  
+
+  color: #fff ;
+  width: 60rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background: #FF8C00;
+}
+.else_item{
+  display: flex;
+  align-items: center;
+}
+.item{
+  width: 100%;
+  height: 200rpx;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+.text_image{
+  display: flex;
+  align-items: center;
+}
+.item_left{
+  height: 190rpx;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+
+}

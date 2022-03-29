@@ -1,0 +1,88 @@
+<view class="top">
+  <view style="display:flex;">
+    <view class="card_title">{{good.boxName}}</view>
+    <view class="card_bable">{{good.label}}</view>
+  </view>
+  <view class="box_money" style="margin-right:10rpx;">￥{{good.price}}</view>
+</view>
+<view class="main">
+  <image src="../../../../images/box/card.png" class="card {{currentTabIndex == item?'selected' : ''}}"
+    bindtap='onTabItemTap' wx:for="{{card}}" data-index='{{item}}'></image>
+</view>
+<view class="button">
+  <view class="button_red" bindtap="random">
+    <view style="margin-top:18rpx;color: rgba(255, 255, 255, 100);font-size: 32rpx;">随机抽</view>
+  </view>
+  <view class="button_yellow" bindtap="showshadow">
+    <view style="margin-top:18rpx;color: rgba(0, 0, 0, 1);font-size: 32rpx;">就选它</view>
+  </view>
+</view>
+<view style="position:absolute;top:89%;width:100%;text-align: center;font-size:28rpx">阅读抽卡规则>></view>
+<view class="bottom" bindtap="showshadow1">
+  <image src="../../../../images/box/up.png" style="width: 40rpx;height: 40rpx;margin-left:280rpx;margin-top:15rpx">
+  </image>
+  <view style="color:black;margin-left:20rpx;margin-top:10rpx">商品详情</view>
+</view>
+
+<!-- 就选它 -->
+<view class="shadow" wx:if="{{chooseSize}}" bindtap='hideModal'></view>
+<view class='choosen' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+  <!-- 内容 -->
+  <view class="container-box">
+    <view style="display:flex;margin-top:20rpx">
+      <view class="card_title" style="color:#000">{{good.boxName}}</view>
+      <view class="card_bable">{{good.label}}</view>
+    </view>
+    <view class="money">
+      <view class="money_font">单价:</view>
+      <view style="color: rgba(16, 16, 16, 100);font-size: 32rpx;">{{good.price}}</view>
+      <view class="money_font" style="margin-left:100rpx">拼团价：</view>
+      <view>{{good.spellPrice}}</view>
+    </view>
+    <view class="pay">
+      <view class="pay_font">支付方式：</view>
+      <radio-group bindchange="radioChange">
+        <label class="weixin">
+          <image src="../../../../images/box/weixin.png" style="width:50rpx;height:50rpx;"></image>
+          <view style="margin-left:20rpx">微信支付</view>
+          <radio style="position:absolute;right:20rpx" value="1" checked="true" />
+        </label>
+        <label class="weixin">
+          <view>使用余额支付（当前可用余额{{balance}}）</view>
+          <radio style="position:absolute;right:20rpx" value="0" checked="" />
+        </label>
+      </radio-group>
+    </view>
+    <view class="notice">
+      <view style="color: rgba(105, 105, 105, 100);">购买须知：</view>
+      <view style="margin-left:30rpx">通过抽卡购买的产品皆为在线拆盒产品，您可以选择邮寄回家或者转售在盲盒商城</view>
+    </view>
+    <view class="button">
+      <view class="button_yellow1" bindtap="topay">
+        <view style="margin-top:25rpx;color: rgba(0, 0, 0, 1);font-size: 32rpx;">立即支付</view>
+      </view>
+      <view class="button_red1" bindtap="topin">
+        <view style="margin-top:25rpx;color: rgba(255, 255, 255, 100);font-size: 32rpx;">发起拼单</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 商品详情 -->
+<view class="shadow" wx:if="{{chooseSize1}}" bindtap='hideModal1'></view>
+<view class='choosen1' wx:if="{{chooseSize1}}" animation='{{animationData}}'>
+  <!-- 内容 -->
+  <view class="container-box">
+    <view style="display:flex" bindtap='hideModal1'>
+      <image src="../../../../images/box/down.png"
+        style="width: 40rpx;height: 40rpx;margin-left:280rpx;margin-top:15rpx">
+      </image>
+      <view style="color:black;margin-left:20rpx;margin-top:10rpx">商品详情</view>
+    </view>
+    <view class="good_main">
+      <view>{{good.boxName}}中 您有可能抽到：</view>
+      <scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <image class="scroll-image" wx:for="{{goodlist}}" src="{{item.iImgs}}"></image>
+      </scroll-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,110 @@
+<view class="search_view"  bindtap="redirect">
+  <text class="search_text" bindtap="goToSearch">上海</text>
+  <image src="../../images/threejiao.png" class="search_image"></image>
+  <view class="search">
+    <image src="../../images/search.png" class="image_search"></image>
+    <input placeholder="快速搜索" class="search_input"></input>
+  </view>
+</view>
+<view class="Tips">
+  <view>近期活动</view>
+  <view style="display:flex;">
+    <view>MORE </view>
+    <image src="../../images/right.png" style="width: 50rpx;height: 50rpx;"></image>
+  </view>
+</view>
+
+<view class="contrainer" style="background:#000;height:auto;width:100%">
+  <scroll-view scroll-x="true" style="background:#000">
+    <view class="item-content">
+      <view wx:for="{{activity}}" wx:for-item="item" wx:key="index">
+        <view class="item-new">
+          <view wx:for="{{item}}" wx:for-item="key" wx:for-index="childindex">
+            <view class="item" bindtap="gotoDetail" data-parent='{{index}}' data-child="{{childindex}}">
+              <view style="position: relative;">
+                <image src="{{key.activityImages}}" class="image"> </image>
+                <view class="topic">
+                  <view>{{key.label}}</view>
+                </view>
+              </view>
+                  <view class="right_item">
+                          <view style="font-size:32rpx;color:#fff;white-space:pre-wrap;">{{key.activityName}}</view>
+                <view style="font-size:28rpx;color:#B7B6B6 ;margin-top: 30rpx;">距离{{key.time}}天结束</view>
+                           
+                           
+              </view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="week_rank">
+    <view
+      style="font-size: 40rpx;text-align: left;color:#fff;margin-left: 12rpx;margin-top: 15rpx;margin-bottom: 15rpx;">
+      本周好去处排行</view>
+    <view wx:for="{{good_place}}" wx:for-index='key' wx:for-item='item'>
+      <view wx:if="{{key < 3}}"  >
+        <view class="rank_item" style="background:#000" bindtap="getDetals" id="{{item.id}}">
+
+          <image src="{{item.img}}" style="width:280rpx;height:190rpx;margin-left: 25rpx;margin-top:15rpx"></image>
+
+          <view class="rank_right_item">
+            <view style="color:#fff;width: 320rpx;">{{item.name}}</view>
+            <view style="display:flex">
+              <image src="../../images/fire.png" style="width:24rpx;height:24rpx;margin-top: 10rpx;"></image>
+              <view style="color:#B7B6B6 ;font-size: 14px;margin-top: 10rpx;"> 人气 {{item.moods}}</view>
+            </view>
+            <view style="color:#F44444;font-size: 14px; margin-top: 5rpx;">{{item.address}}</view>
+            <view style="background:#BBBBBB;height:2rpx;width:400rpx;margin-top: 20rpx"></view>
+          </view>
+          <view class="No">
+            <view>{{item.rank}}</view>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class="else_item">
+          <view style="color:#fff;margin-left: 20rpx;">{{item.rank}}</view>
+          <view style="color:#fff;margin-left: 40rpx;width: 250rpx;">{{item.name}}</view>
+          <view class="hot_class" style="display:flex;margin-left: 220rpx;">
+            <image src="../../images/fire.png" style="width:24rpx;height:24rpx;margin-top: 10rpx;"></image>
+            <view style="color:#B7B6B6 ;font-size: 14px;margin-top: 10rpx;"> 人气 {{item.moods}}</view>
+          </view>
+        </view>
+        <view style="background:#BBBBBB;height:2rpx;width: 700rpx;margin-left: 15rpx;margin-top: 15rpx;"></view>
+      </view>
+    </view>
+  </view>
+  <view style="display:flex;align-items: center;justify-content: center;color: #fff;margin-top: 15rpx;font-size:40rpx">
+    <view>MORE</view>
+    <image src="./../../images/right.png" style="width: 50rpx;height: 50rpx;"></image>
+  </view>
+</view>
+
+<view class="shop">
+  <view
+    style="width: 80px;height: 28px;color: rgba(255, 255, 255, 100);font-size: 20px;text-align: left;margin-left: 15rpx;magin-buttom:20rpx">
+    店铺列表</view>
+  <view wx:for="{{information}}">
+    <view class="item">
+      <image src="{{item.banner[0]}}" style="width:220rpx;height:160rpx;border-radius: 5rpx;margin-left:20rpx"></image>
+      <view class="item_left">
+        <view style="color:#fff;margin-top:10rpx;margin-left: 25rpx;">{{item.name}}</view>
+        <view class="text_image" style="margin-left: 22rpx;margin-top: 6rpx;">
+          <image src="../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+          <image src="../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+          <image src="../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+          <image src="../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+          <view style="color:#999998;width:auto;height:34rpx">￥{{item.moods}}/人</view>
+        </view>
+        <view style="color:#999998;width:auto;height:34rpx;font-size: 24rpx;margin-left: 25rpx; margin-top: 8rpx;">
+          {{item.startTime}} 至 {{item.endTime}} 开放</view>
+        <view style="color:#F44444 ;font-size: 12px;;margin-left: 25rpx; margin-top: 6rpx;">{{item.address}}</view>
+        <view style="height:2rpx;background-color:#F5F5F5 ;width:440rpx;;margin-left: 25rpx; margin-top: 15rpx;"></view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<view class="address">
+  <view class="top">
+    <image src="../../../../../images/mine/time.png" style="width:50rpx;height:50rpx;margin-left:20rpx"></image>
+    <view style="color: rgba(255, 255, 255, 100);font-size: 40rpx;margin-left:40rpx">待确认</view>
+  </view>
+  <view class="dic">
+    <image src="../../../../../images/mine/dic.png" style="width:50rpx;height:50rpx;margin-left:20rpx"></image>
+    <view class="dic_content">
+      <view class="dic_content_top">
+        <view>{{address.name}}</view>
+        <view style="margin-left:20rpx">{{address.mobile}}</view>
+      </view>
+      <view class="dic_content_bottom">{{address.province}} {{address.city}} {{address.region}}</view>
+    </view>
+  </view>
+</view>
+<view class="goods">
+  <view class="good_content">
+    <image src="{{good.imgs[0]}}"
+      style="width:200rpx;height:200rpx"></image>
+    <view class="goods_title">
+      <view style="font-size: 32rpx;width:450rpx;height:150rpx;">{{good.iName}}</view>
+      <view style="color: rgba(230, 11, 48, 100);font-size: 28rpx;">{{good.totalCount}}积分</view>
+    </view>
+  </view>
+</view>
+<view class="button" bindtap="todingdan">
+  <view style="color: rgba(255, 255, 255, 100);font-size: 34rpx;margin-top:24rpx">确认订单</view>
+</view>

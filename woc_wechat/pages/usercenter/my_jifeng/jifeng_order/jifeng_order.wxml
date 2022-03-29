@@ -1,0 +1,47 @@
+<view class="tabs">
+  <view class="tab">
+    <!-- 选项卡 -->
+    <block wx:for="{{['全部','待发货','待收货','已完成']}}" wx:key="id">
+      <view class="tab_item {{currentTabIndex == index? 'selected' : ''}}" bindtap='onTabItemTap'
+        data-index='{{index}}'>
+        {{item}}
+      </view>
+    </block>
+  </view>
+  <view class="item_detail">
+    <!-- 全部 -->
+    <view class="list" hidden="{{currentTabIndex != 0}}" wx:for="{{list}}" wx:key="{{list.item.id}}" >
+      <view class=" card">
+      <view class="top">
+        <view class="top_font">订单号：{{item.orderNo}}</view>
+        <view class="dian" wx:if="{{item.orderStatus == 1}}"> 待发货</view>
+        <view class="dian" wx:if="{{item.orderStatus == 2}}"> 待收货</view>
+        <view class="dian" wx:if="{{item.orderStatus == 3}}"> 已完成</view>
+      </view>
+      <view class="main">
+        <view class="content">
+          <image class="content_img" src="{{item.integralGoodsPicture}}">
+          </image>
+          <view class="content_font">{{item.integralGoodsName}}</view>
+          <view class="count">
+            <view class="price">{{item.point}}分</view>
+            <view style="margin-top:20rpx">×{{item.num}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="bottom">
+        <view class="bottom_font">
+          <view>需支付：</view>
+          <view style="color:#FF0000">{{item.point}}分</view>
+        </view>
+        <view class="button" bindtap="todetail" data-index="{{item.id}}">
+          <view style="margin-top:10rpx;font-size:28rpx">订单详情</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 粉丝列表 -->
+<view class="list" hidden="{{currentTabIndex != 1}}">
+</view>
+</view>

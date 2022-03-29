@@ -1,0 +1,58 @@
+<view class="background">
+  <image src="../../images/mine/background.png" style="width:100%;height:300rpx"></image>
+</view>
+<view class="container">
+  <view wx:if="{{!hasUserInfo}}" class="userinfo">
+    <image wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" class="user_avatar"
+      src="../../images/mine/avatar.png"></image>
+    <image wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="user_avatar"
+      src="../../images/mine/avatar.png"></image>
+    <text class="nickname">请先登陆</text>
+    <text class="font">点击头像登陆/注册个人账号</text>
+  </view>
+  <view wx:else class="userinfo" bindtap="toUserinfo">
+    <image bindtap="bindViewTap" class=" user_avatar" src="{{userInfo.avatar}}" mode="scaleToFill"></image>
+    <text class="nickname">{{userInfo.nickname}}</text>
+    <text class="font">查看/编辑个人资料</text>
+    <image class="userinfo_bianji" src="../../images/mine/bianji.png" ></image>
+  </view>
+  <view class="userBlock">
+    <view class="grid_item" bindtap="tomoney">
+      <view class="grid_item_font" wx:if="{{!hasUserInfo}}">8888</view>
+      <view class="grid_item_font" wx:else>{{userInfo.balance}}</view>
+      <view class="grid_item_font1">余额</view>
+    </view>
+    <view class="grid_item" style=" border: 1rpx solid lightgray;border-top: none;border-bottom: none;" bindtap="tojifeng">
+      <view class="grid_item_font" wx:if="{{!hasUserInfo}}">8888</view>
+      <view class="grid_item_font" wx:else>{{userInfo.point}}</view>
+      <view class="grid_item_font1">积分</view>
+    </view>
+    <view class="grid_item" bindtap="tocoup">
+      <view class="grid_item_font" wx:if="{{!hasUserInfo}}">8888</view>
+      <view class="grid_item_font" wx:else>{{userInfo.couponCount}}</view>
+      <view class="grid_item_font1">优惠劵</view>
+    </view>
+  </view>
+</view>
+<view class="list">
+  <view class="list_item" bindtap="torelease">
+    <image class="list_item_image" src="../../images/mine/dynamic.png"></image>
+    <text class="list_item_font">我的动态</text>
+    <image class="list_item_go" src="../../images/mine/go.png"></image>
+  </view>
+  <view class="list_item" bindtap="to_order">
+    <image class="list_item_image" src="../../images/mine/money.png"></image>
+    <text class="list_item_font">我的交易</text>
+    <image class="list_item_go" src="../../images/mine/go.png"></image>
+  </view>
+  <view class="list_item" bindtap="tocollect">
+    <image class="list_item_image" src="../../images/mine/collect.png"></image>
+    <text class="list_item_font">我的收藏</text>
+    <image class="list_item_go" src="../../images/mine/go.png"></image>
+  </view>
+  <view class="list_item" style="margin-top: 30rpx;" bindtap="toset">
+    <image class="list_item_image" src="../../images/mine/set.png"></image>
+    <text class="list_item_font">设置</text>
+    <image class="list_item_go" src="../../images/mine/go.png"></image>
+  </view>
+</view>

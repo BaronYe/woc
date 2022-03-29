@@ -1,0 +1,20 @@
+<view class="card" wx:for="{{message}}" wx:key="item">
+  <view class="top">
+    <image class="gouwu" src="../../../images/message/goods.png"></image>
+    <view class="top_font">{{item.title}}</view>
+    <image class="dian" src="../../../images/message/dian.png"></image>
+  </view>
+  <view class="main">
+    <view class="title">{{item.content}}</view>
+    <view class="time">{{item.createTime}}</view>
+    <view class="content">
+      <image class="content_img" src="{{item.order.boxPicture}}">
+      </image>
+      <view class="content_font">{{item.order.boxName}}</view>
+    </view>
+  </view>
+  <view class="bottom">
+  <view class="bottom_font">查看详情</view>
+  <image class="go" src="../../../images/message/go.png"></image>
+  </view>
+</view>

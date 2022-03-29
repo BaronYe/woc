@@ -1,0 +1,59 @@
+<view class="top">
+  <view style="display:flex;">
+    <view class="card_title">{{box.boxName}}</view>
+    <view class="card_bable">{{box.label}}</view>
+  </view>
+  <view class="box_money" style="margin-right:10rpx;">￥{{box.price}}</view>
+</view>
+<view class="main">
+  <text class="title">恭喜您，抽中了 {{good.title}}</text>
+  <!-- 正面的框 -->
+  <view class="box b1" animation="{{animationMain}}" bindtap='rotateFn' data-id="1">
+    <image src="../../../../images/box/card.png"></image>
+  </view>
+  <!--背面的框  -->
+  <view class="box b2" animation="{{animationBack}}" bindtap='rotateFn' data-id="2">
+    <image src="{{good.imgs[0]}}"></image>
+  </view>
+</view>
+<view class="button">
+  <view class="button_red" bindtap="toAddress">
+    <view style="margin-top:18rpx;color: rgba(255, 255, 255, 100);font-size: 32rpx;">邮寄</view>
+  </view>
+  <view class="button_yellow" bindtap="showshadow">
+    <view style="margin-top:18rpx;color: rgba(0, 0, 0, 1);font-size: 32rpx;">转售</view>
+  </view>
+</view>
+
+<!-- 转售 -->
+<view class="shadow" wx:if="{{chooseSize}}" bindtap='hideModal'></view>
+<view class='choosen' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+  <!-- 内容 -->
+  <view class="weui-cells__title">商品名称:</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="{{good.title}}" bindinput="nameinput" />
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">售价（元）:</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="digit" placeholder="推荐价格{{good.price}}" bindinput="priceinput"/>
+      </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">介绍(可选)：</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="好的介绍可以提高成交率哟"  bindinput="maininput"  maxlength="20"/>
+      </view>
+    </view>
+  </view>
+  <view class="button_red1" bindtap="tosell">
+    <view style="padding-top:15rpx;color: rgba(255, 255, 255, 100);font-size: 32rpx;">确认</view>
+  </view>
+</view>

@@ -1,0 +1,163 @@
+<!--pages/index/coupon/coupon_page.wxml-->
+
+<view class="box">
+
+<!-- 头部 -->
+<view class="head">
+<view class="{{type==0?'head_text':'head_text_white'}}"  bindtap="getZero">  通用券</view>
+<view class="{{type==1?'head_text':'head_text_white'}}" bindtap="getOne">  专用券</view>
+</view>
+
+<!-- divide_line -->
+<view class="line_head">
+<view class="{{type==0?'divide_line_red':'divide_line_white'}}"  bindtap="getZero">  </view>
+<view class="{{type==1?'divide_line_red':'divide_line_white'}}" bindtap="getOne">  </view>
+</view>
+
+<block wx:if="{{type==0}}">
+<!-- remind -->
+<view class="remind">
+<view >{{text}}</view>
+</view>
+
+<!-- for in coupon -->
+<view wx:for="{{coupon_data}}" wx:for-index='key'>
+<coupon   ifget="{{item.isGet}}" id="{{item.id}}" price="{{item.couponPrice}}" max="{{item.useMinPrice}}" startTime="{{item.startTime}}" endTime="{{item.endTime}}" bind:myevent="onMyget" bind:myuse="myuse"> 
+</coupon>
+
+</view>
+</block>
+<!-- special_coupon -->
+<block wx:if="{{type==1}}">
+<view class="special_coupon_image">
+<image src="{{test_image}}" style="width:100%;height:100%"></image>
+
+</view>
+
+<view class="box">
+
+<!-- 头部 -->
+<view class="body">
+<view class="{{bodyType==0?'head_text':'head_text_white'}}" style="margin-left:40rpx;width: 136rpx;height: 40rpx;font-size: 34rpx;"  bindtap="getbodyTypeZero"> 附近打卡</view>
+<view class="{{bodyType==1?'head_text':'head_text_white'}}" style="margin-left:40rpx;width: 136rpx;height: 40rpx;;font-size: 34rpx;" bindtap="getbodyTypeOne">  潮好玩</view>
+</view>
+</view>
+<!-- divide_line -->
+<view class="body_line_head">
+<view class="{{bodyType==0?'divide_line_red':'divide_line_white'}}"  style="width:130rpx;margin-left:40rpx" bindtap="getbodyTypeZero">  </view>
+<view class="{{bodyType==1?'divide_line_red':'divide_line_white'}}" style="width:120rpx;margin-left:40rpx" bindtap="getbodyTypeOne">  </view>
+</view>
+
+<block wx:if="{{bodyType==0}}">
+<view style="display:flex;align-items: center;justify-content: center;">
+<scroll-view style="width:100%;height:auto;">
+<view wx:for="{{special_coupon_here_data}}" wx:for-index='key'>
+<!-- item -->
+<view class="buttom_item">
+<!-- head -->
+<view class="buttom_head">
+<!-- head-left -->
+<view class="buttom_head_left">
+<view style="display:flex;align-items: center;color:#FF5252 ">
+<view style="width: 28rpx;height: 26rpx;font-size: 12px;margin-top: 65rpx;">￥</view>
+<view style="width: 48px;height: 35px;font-size: 40px;font-weight:bold">{{item.couponPrice}}</view>
+</view>
+<view style="margin-top: 20rpx;font-size: 12px;">满￥{{item.useMinPrice}}使用</view>
+</view>
+<!-- head right -->
+<view class="buttom_head_right">
+<!-- head right top -->
+<view class="buttom_head_right_top" >
+<view style="width: 44px;height: 15px;background:#F6390D;display:flex; justify-content: center; align-items: center; ">
+<view style="width: 36px;height: 15px;font-size: 12px;font-weight:bold">满减券</view>
+</view>
+<view style="font-size: 13px;margin-left:10rpx ">{{item.shopName}}无门槛{{item.couponPrice}}元券</view>
+</view>
+<!-- head right buttom -->
+<view class="buttom_head_right_buttom" >
+<wxs module="filter" src="../../../utils/filter.wxs"></wxs>
+<view style="margin-top:20rpx;color:#999999 ;font-size: 12px;">{{filter.formatTime(item.startTime,"YYYY-MM-dd")}} - {{filter.formatTime(item.endTime,"YYYY-MM-dd")}} </view>
+<!-- <view style="margin-top:20rpx;color:#F6390D;font-size: 12px;margin-left:15rpx ">(仅剩1天)</view> -->
+</view>
+</view>
+</view>
+<canvas></canvas>
+<!-- body -->
+<view class="buttom_body">
+<view style="margin-top:30rpx;">仅限购买{{item.shopName}}商品</view>
+<view wx:if="{{item.isGet==-1}}">
+<view style="color:#fff;width: 128rpx;height: 56rpx;background:#EF3636;border-radius: 12rpx;font-size: 24rpx;display: flex; align-items: center;border-radius: 34rpx;  justify-content: center;margin-left:250rpx;margin-top: 20rpx;" bindtap="set_special_get" id="{{item.id}}"><view>立即领取</view></view>
+</view>
+<view wx:if="{{item.isGet==0}}">
+<view style="color:#000;width: 128rpx;height: 56rpx;background:#F8F8F8  ;border-radius: 12rpx;font-size: 24rpx;display: flex; align-items: center;border-radius: 34rpx;  justify-content: center;margin-left:250rpx;margin-top: 20rpx;" bindtap="myuse" id="{{item.id}}"><view>去使用</view></view>
+</view>
+<view wx:if="{{item.isGet==1}}">
+<view style="color:#000;width: 128rpx;height: 56rpx;background:#F8F8F8  ;border-radius: 12rpx;font-size: 24rpx;display: flex; align-items: center;border-radius: 34rpx;  justify-content: center;margin-left:250rpx;margin-top: 20rpx;" bindtap="myuse" id="{{item.id}}"><view>已使用</view></view>
+</view>
+<view wx:if="{{item.isGet==2}}">
+<view style="color:#000;width: 128rpx;height: 56rpx;background:#F8F8F8  ;border-radius: 12rpx;font-size: 24rpx;display: flex; align-items: center;border-radius: 34rpx;  justify-content: center;margin-left:250rpx;margin-top: 20rpx;" bindtap="myuse" id="{{item.id}}"><view>已过期</view></view>
+</view>
+
+</view>
+</view>
+</view>
+</scroll-view>
+</view>
+</block>
+<block wx:if="{{bodyType==1}}">
+<view style="display:flex;align-items: center;justify-content: center;">
+<scroll-view style="width:100%;height:auto;">
+<view wx:for="{{special_coupon_play_data}}" wx:for-index='key'>
+<!-- item -->
+<view class="buttom_item">
+<!-- head -->
+<view class="buttom_head">
+<!-- head-left -->
+<view class="buttom_head_left">
+<view style="display:flex;align-items: center;color:#FF5252 ">
+<view style="width: 28rpx;height: 26rpx;font-size: 12px;margin-top: 65rpx;">￥</view>
+<view style="width: 48px;height: 35px;font-size: 40px;font-weight:bold">{{item.couponPrice}}</view>
+</view>
+<view style="margin-top: 20rpx;font-size: 12px;">满￥{{item.useMinPrice}}使用</view>
+</view>
+<!-- head right -->
+<view class="buttom_head_right">
+<!-- head right top -->
+<view class="buttom_head_right_top" >
+<view style="width: 44px;height: 15px;background:#F6390D;display:flex; justify-content: center; align-items: center; ">
+<view style="width: 36px;height: 15px;font-size: 12px;font-weight:bold">满减券</view>
+</view>
+<view style="font-size: 13px;margin-left:10rpx ">{{item.shopName}}无门槛{{item.couponPrice}}元券</view>
+</view>
+<!-- head right buttom -->
+<view class="buttom_head_right_buttom" >
+<wxs module="filter" src="../../../utils/filter.wxs"></wxs>
+<view style="margin-top:20rpx;color:#999999 ;font-size: 12px;">{{filter.formatTime(item.startTime,"YYYY-MM-dd")}} - {{filter.formatTime(item.endTime,"YYYY-MM-dd")}} </view>
+<!-- <view style="margin-top:20rpx;color:#F6390D;font-size: 12px;margin-left:15rpx ">(仅剩1天)</view> -->
+</view>
+</view>
+</view>
+<canvas></canvas>
+<!-- body -->
+<view class="buttom_body">
+<view style="margin-top:30rpx;">仅限购买{{item.shopName}}商品</view>
+<view wx:if="{{item.isGet==-1}}">
+<view style="color:#fff;width: 128rpx;height: 56rpx;background:#EF3636;border-radius: 12rpx;font-size: 24rpx;display: flex; align-items: center;border-radius: 34rpx;  justify-content: center;margin-left:250rpx;margin-top: 20rpx;" bindtap="set_special_get" id="{{item.id}}"><view>立即领取</view></view>
+</view>
+<view wx:if="{{item.isGet==0}}">
+<view style="color:#000;width: 128rpx;height: 56rpx;background:#F8F8F8  ;border-radius: 12rpx;font-size: 24rpx;display: flex; align-items: center;border-radius: 34rpx;  justify-content: center;margin-left:250rpx;margin-top: 20rpx;" bindtap="myuse" id="{{item.id}}"><view>去使用</view></view>
+</view>
+<view wx:if="{{item.isGet==1}}">
+<view style="color:#000;width: 128rpx;height: 56rpx;background:#F8F8F8  ;border-radius: 12rpx;font-size: 24rpx;display: flex; align-items: center;border-radius: 34rpx;  justify-content: center;margin-left:250rpx;margin-top: 20rpx;" bindtap="myuse" id="{{item.id}}"><view>已使用</view></view>
+</view>
+<view wx:if="{{item.isGet==2}}">
+<view style="color:#000;width: 128rpx;height: 56rpx;background:#F8F8F8  ;border-radius: 12rpx;font-size: 24rpx;display: flex; align-items: center;border-radius: 34rpx;  justify-content: center;margin-left:250rpx;margin-top: 20rpx;" bindtap="myuse" id="{{item.id}}"><view>已过期</view></view>
+</view>
+</view>
+</view>
+</view>
+</scroll-view>
+</view>
+</block>
+</block>
+</view>

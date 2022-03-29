@@ -1,0 +1,29 @@
+page {
+  background-color: black;
+}
+
+.input_containt {
+  position: absolute;
+  width: 100%;
+  height: 200rpx;
+}
+
+.input {
+  width: 650rpx;
+  height: 200rpx;
+  margin-left: 50rpx;
+  background-color: rgba(238, 238, 238, 100);
+  color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  border: 1px solid rgba(255, 0, 0, 0);
+}
+
+.save {
+  position: absolute;
+  width: 150rpx;
+  height: 70rpx;
+  top: 230rpx;
+  left: 200rpx;
+  border-radius: 20rpx;
+  text-align: center;
+}

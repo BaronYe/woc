@@ -1,0 +1,77 @@
+/* pages/index/map/map.wxss */
+.search_view{
+  display: flex;
+  height: 150rpx;
+  width: 100%;
+  background-color: #000000;
+  align-items: center;
+ 
+}
+.search_text{
+  
+  margin-left: 10rpx;
+  color: #fff;
+  width: auto;
+  
+
+}
+.image-parent {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+}
+
+.child {
+  width: 100px;
+  height: 24px;  
+  position: absolute;
+  left: 0;
+  top: 0px;
+  right: 0;
+  bottom: 20rpx;
+  margin: auto;
+  text-align: center;
+  font-size: 80rpx;
+  
+
+}  
+
+.search_image{
+ 
+  justify-content: center;
+  align-items: center;
+  margin-left: 10rpx;
+  width: 23rpx;
+  height: 23rpx;
+}
+.search{
+  
+  margin-left: 15rpx;
+  width: 600rpx;
+  height: 60rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.image_search{
+  align-items: center;
+  margin-left: 15rpx;
+  width: 28rpx;
+  height: 28rpx;
+}
+.search_input{
+ 
+  margin-left: 20rpx;
+  font-size: 25rpx;
+  color: #CCCCCC;
+ 
+  width: 450rpx;
+}
+.name{
+  margin-left: 20rpx;
+
+  font-size: 50rpx;
+  color: rgb(170, 170, 170,0.5);
+}

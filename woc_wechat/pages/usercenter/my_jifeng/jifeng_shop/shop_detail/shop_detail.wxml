@@ -1,0 +1,22 @@
+<view class="image">
+  <swiper indicator-dots="true" autoplay="true" class="swiper">
+    <block wx:for="{{goods.imgs}}" wx:key="*this">
+      <swiper-item class="swiper_item">
+        <image src="{{item}}" mode='aspectFill' style="width:100%;"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="main">
+  <view class="money">{{goods.totalCount}}积分</view>
+  <view class="title">{{goods.iName}}</view>
+  <view class="content">
+    <view style="color: rgba(255, 255, 255, 100);font-size: 28rpx;">商品详情</view>
+    <image src="../../../../../images/mine/go.png" style="margin-left:550rpx;width: 36rpx;height: 36rpx;"></image>
+
+  </view>
+  <view class="content_main">{{goods.content}}</view>
+</view>
+<view class="button" bindtap="to_order">
+  <view style="color: rgba(255, 255, 255, 100);font-size: 34rpx;margin-top:24rpx">积分兑换</view>
+</view>

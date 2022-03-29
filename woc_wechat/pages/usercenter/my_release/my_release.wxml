@@ -1,0 +1,45 @@
+<view class="background">
+  <image src="../../../images/mine/background.png" style="width:100%;height:300rpx"></image>
+</view>
+<view class="top">
+  <view class="nickname">{{userInfo.nickname}}</view>
+  <image class="avatar" mode="scaleToFill" src="{{userInfo.avatar}}"></image>
+  <view class="desc">{{userInfo.userDesc}}</view>
+</view>
+<view class="bottom">
+  <view class="box_all" wx:for="{{dongtai}}">
+    <view class="header">
+      <wxs module="filter" src="../../../utils/filter.wxs">
+      </wxs>
+      <view class="time">{{filter.formatTime(item.createTime,'MM-dd')}}</view>
+      <image class="set" src="../../../images/mine/quanxian.png"></image>
+    </view>
+    <view class="body">
+      <view class="main">{{item.content}}</view>
+      <view class="image_content">
+        <view class='image' wx:for="{{item.imgs}}">
+          <image class="moment_img" src="{{item}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="tail">
+      <view class="dic">
+        <image src="../../../images/mine/dic.png" class="dic_icon"></image>
+        <view class="dic_main">{{item.dic}}</view>
+      </view>
+      <view class="button">
+        <view class="button_item">
+          <image class="button_item_icon" src="../../../images/dianzan.png" bindtap="dianzan"></image>
+          <view class="button_item_font">{{item.iszan}}</view>
+        </view>
+        <view class="button_item">
+          <image class="button_item_icon" src="../../../images/liaotian.png"></image>
+          <view class="button_item_font">{{item.isAudit}}</view>
+        </view>
+        <view class="button_item">
+          <image class="button_item_icon" src="../../../images/zhuanfa.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,167 @@
+page {
+  background-color: #181727;
+  color: white;
+}
+
+.background {
+  width: 100%;
+  height: 250rpx;
+}
+
+.top {
+  position: absolute;
+  top: 200rpx;
+  width: 100%;
+  height: 250rpx;
+}
+
+.nickname {
+  position: absolute;
+  right: 210rpx;
+  top: 120rpx;
+  color: rgba(255, 255, 255, 100);
+  font-size: 40rpx;
+}
+
+.avatar {
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+  right: 40rpx;
+  top: 40rpx;
+  border-radius: 50%;
+  border: 1rpx solid #000000;
+}
+
+.desc {
+  position: absolute;
+  right: 30rpx;
+  top: 200rpx;
+  color: rgba(153, 153, 153, 100);
+  font-size: 28rpx;
+  text-align: left;
+}
+
+.bottom {
+  position: absolute;
+  top: 480rpx;
+  width: 100%;
+}
+
+.box_all {
+  position: relative;
+  width: 96%;
+  left: 2%;
+  margin-top: 20rpx;
+  border: 1rpx solid lightgray;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  height: 80rpx;
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+
+.time {
+  width: 200rpx;
+  height: 60rpx;
+  left: 10rpx;
+  color: rgba(255, 255, 255, 100);
+  font-size: 40rpx;
+}
+
+.set {
+  margin-top: 5rpx;
+  margin-left: 470rpx;
+  width: 40rpx;
+  height: 48rpx;
+}
+
+.body {
+  position: relative;
+  width: 100%;
+}
+
+.main {
+  position: relative;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  color: rgba(255, 255, 255, 100);
+  font-size: 28rpx;
+  word-wrap: break-word;
+}
+
+.image_content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15rpx;
+  margin-top: 20rpx;
+}
+
+.image {
+  width: 190rpx;
+  height: 190rpx;
+  padding: 20rpx;
+  border-radius: 30rpx;
+}
+
+.moment_img {
+  width: 195rpx;
+  height: 195rpx;
+  border-radius: 10rpx;
+}
+
+.tail {
+  position: relative;
+  width: 100%;
+}
+
+.dic {
+  position: relative;
+  display: flex;
+}
+
+.dic_icon {
+  margin-left: 10rpx;
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.dic_main {
+  margin-top: 5rpx;
+  margin-left: 10rpx;
+  color: rgba(74, 101, 195, 100);
+  font-size: 28rpx;
+}
+
+.button {
+  position: relative;
+  display: flex;
+}
+
+.button_item {
+  display: flex;
+  width: 140rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+
+.button_item_icon {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.button_item_font {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  color: rgba(169, 171, 174, 100);
+  font-size: 24rpx;
+}

@@ -1,0 +1,13 @@
+<view class="list" wx:for="{{zan}}">
+  <view class="list_item">
+    <image class="list_item_image" src="{{item.users.avatar}}">
+    </image>
+    <view class="list_item_font">
+      <view class="list_item_font1">{{item.users.nickname}}</view>
+      <wxs module="filter" src="../../../utils/filter.wxs"></wxs>
+      <view class="list_item_time">{{filter.formatTime(item.time,'MM-dd')}}</view>
+    </view>
+    <text class="list_item_font2">喜欢了你的动态</text>
+    <image class="dongtai" src="{{item.dynamic.imgs}}"></image>
+  </view>
+</view>

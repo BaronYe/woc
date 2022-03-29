@@ -1,0 +1,7 @@
+<view class="list">
+  <view class="list_left">问题反馈</view>
+  <image class="list_right" src="../../../images/mine/go.png"></image>
+</view>
+<view class="button" bindtap="out">
+  <view style="padding-top:30rpx">退出登陆</view>
+</view>

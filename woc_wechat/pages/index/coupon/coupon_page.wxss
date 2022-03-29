@@ -1,0 +1,146 @@
+/* pages/index/coupon/coupon_page.wxss */
+page{
+  background-color: black;
+  color: white;
+  }
+
+.head{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40rpx;
+
+}
+.body{
+  display: flex;
+  justify-content: left;
+  margin-top: 40rpx;
+}
+.head_text{
+  color: #F44444 ;
+  font-size: 28rpx;
+  width: 100rpx;
+height: 40rpx;
+}
+.head_text_white{
+  font-size: 28rpx;
+  width: 100rpx;
+height: 40rpx;
+color: #fff ;  
+}
+.divide_line_red{
+  width: 230rpx;
+height: 6rpx;
+background: #F44444 ;
+margin-top: 20rpx;
+
+}
+.divide_line_white{
+  width: 230rpx;
+  height: 6rpx;
+background: #000 ;
+margin-top: 20rpx;
+
+}
+.remind{
+  margin-top: 20rpx;
+  width: 340rpx;
+height: 50rpx;
+color: #FFFFFF 100%;
+font-size: 36rpx;
+margin-left: 50rpx;
+}
+.line_head{
+  display: flex;
+  justify-content: space-around;
+}
+.body_line_head{
+  display: flex;
+  justify-content: left;
+}
+.special_coupon_image{
+  margin-top: 20rpx;
+  width: 100%;
+height: 282rpx;
+}
+.item{
+  display: flex;
+color: black;
+  width: 100%;
+  height: 278rpx;
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  margin-top: 20rpx;
+}
+.item_right{
+  display: flex;
+  flex-direction: column;
+   margin-left: 20rpx;
+
+}
+.price{
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.buttom{
+  margin-top: 20rpx;
+  color: #fff;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.line_delete{
+  position: relative;
+  height: 2rpx;
+  width: 96rpx;
+  background: #BBBBBB ;
+  left: -85rpx;
+}
+.buttom_item{
+  width: 710rpx;
+  height: 242rpx;
+  background: #414345 ;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+
+
+}
+.buttom_head{
+  display: flex;
+  align-items: center;
+}
+.buttom_head_left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50rpx;
+}
+.buttom_head_right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 90rpx;
+
+}
+.buttom_head_right_top{
+display: flex;
+align-items: center;
+margin-top: 40rpx;
+
+}
+.buttom_head_right_buttom{
+  display: flex;
+  align-items: center;
+
+}
+.buttom_body{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  text-align: left;
+  color: #999999 ;
+  margin-left: 40rpx;
+}

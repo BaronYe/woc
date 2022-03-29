@@ -1,0 +1,9 @@
+<view class="top">
+  <view class="money_bi">￥</view>
+  <view class="money">{{money}}</view>
+  <view class="money_info">账户余额可提现或购买盲盒</view>
+  <view class="money_main" bindtap="tomain">查看余额明细</view>
+</view>
+<view class="bottom">
+  <button class="button" bindtap="tixian">提现</button>
+</view>

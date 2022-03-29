@@ -1,0 +1,40 @@
+<view class="top">
+  <view class="grid_item" bindtap="tozan">
+    <image class="grid_item_image" src="../../images/message/zan.png"></image>
+    <view class="grid_item_font">动态点赞</view>
+  </view>
+  <view class="grid_item" bindtap="tofollow">
+    <image class="grid_item_image" src="../../images/message/follow.png"></image>
+    <view class="grid_item_font">关注粉丝</view>
+  </view>
+  <view class="grid_item" bindtap="topinglun">
+    <image class="grid_item_image" src="../../images/message/pinglun.png"></image>
+    <view class="grid_item_font">评论</view>
+  </view>
+</view>
+<view class="list">
+  <view class="list_item" bindtap="toxitong">
+    <image class="list_item_image" src="../../images/message/xitong.png"></image>
+    <view class="list_item_font">
+      <view class="list_item_font1">系统通知</view>
+      <view class="list_item_font2">系统更新消息</view>
+    </view>
+    <text class="list_item_time">04-29</text>
+  </view>
+  <view class="list_item" bindtap="toshangping">
+    <image class="list_item_image" src="../../images/message/shangping.png"></image>
+    <view class="list_item_font">
+      <view class="list_item_font1">商品消息</view>
+      <view class="list_item_font2">你的商品已发货</view>
+    </view>
+    <text class="list_item_time">04-29</text>
+  </view>
+  <view class="list_item" bindtap="tojifeng">
+    <image class="list_item_image" src="../../images/message/jifeng.png"></image>
+    <view class="list_item_font">
+      <view class="list_item_font1">积分消息</view>
+      <view class="list_item_font2">获得10积分</view>
+    </view>
+    <text class="list_item_time">04-29</text>
+  </view>
+</view>

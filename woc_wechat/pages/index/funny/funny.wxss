@@ -1,0 +1,18 @@
+.item{
+  width: 100%;
+  height: 200rpx;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+.text_image{
+  display: flex;
+  align-items: center;
+}
+.item_left{
+  height: 190rpx;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+
+}

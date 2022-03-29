@@ -1,0 +1,19 @@
+<view wx:for="{{information}}" wx:key="{{information.item}}">
+  <view class="item" bindtap="gotoDetail" data-index="{{item.id}}">
+    <image src="{{item.banner[0]}}" style="width:220rpx;height:160rpx;border-radius: 5rpx;margin-left:20rpx"></image>
+    <view class="item_left">
+      <view style="color:#fff;margin-top:10rpx;margin-left: 25rpx;">{{item.name}}</view>
+      <view class="text_image" style="margin-left: 22rpx;margin-top: 6rpx;">
+        <image wx:if="{{item.moods >200}}" src="../../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+        <image wx:if="{{item.moods >200}}" src="../../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+        <image wx:if="{{item.moods >500}}" src="../../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+        <image wx:if="{{item.moods >600}}" src="../../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+        <view style="color:#999998;width:auto;height:34rpx">￥{{item.price}}/人</view>
+      </view>
+      <view style="color:#999998;width:auto;height:34rpx;font-size: 24rpx;margin-left: 25rpx; margin-top: 8rpx;">
+        {{item.startTime}} 至 {{item.endTime}} 开放</view>
+      <view style="color:#F44444 ;font-size: 12px;;margin-left: 25rpx; margin-top: 6rpx;">{{item.address}}</view>
+      <view style="height:2rpx;background-color:#F5F5F5 ;width:440rpx;;margin-left: 25rpx; margin-top: 15rpx;"></view>
+    </view>
+  </view>
+</view>

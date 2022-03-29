@@ -1,0 +1,55 @@
+<view class="weui-form__control-area">
+  <view class="weui-cells__group weui-cells__group_form">
+    <view class="weui-cells__title">收货地址</view>
+    <view class="weui-cells weui-cells_form">
+      <!-- 姓名 -->
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">姓名</label></view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="{{address.name}}" bindinput="editname" />
+        </view>
+      </view>
+      <!-- 电话 -->
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">电话</label></view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="number" pattern="[0-9]*" placeholder="{{address.mobile}}" bindinput="editmobile" />
+        </view>
+      </view>
+      <!-- 地区 -->
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <label class="weui-label1">地区</label>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+            <view class="weui-select1 weui-select_in-select-after" style="color:#b2b2b2;;">{{address.province}}
+              {{address.city}} {{address.region}}</view>
+          </picker>
+        </view>
+      </view>
+      <!-- 地址 -->
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">地址</label></view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="{{address.detailed}}" bindinput="editdetail" />
+        </view>
+      </view>
+      <!-- 是否默认 -->
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd" style="color:white">设置为默认地址</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{switch}}" bindchange="switchChange" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="button">
+    <view class="button_item" bindtap="toedit">
+      <view style="padding-top:24rpx">
+        保存修改</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,112 @@
+page {
+  background-color: #181727;
+  color: white;
+}
+
+.top {
+  position: relative;
+  width: 94%;
+  left: 3%;
+}
+
+.count {
+  width: 170rpx;
+  height: 140rpx;
+  color: rgba(255, 255, 255, 100);
+  font-size: 96rpx;
+}
+
+.detail {
+  width: 100%;
+  display: flex;
+}
+
+.detail_font {
+  height: 50rpx;
+  color: rgba(153, 153, 153, 100);
+  font-size: 28rpx;
+}
+
+.detail_button {
+  position: absolute;
+  right: 10rpx;
+  width: 160rpx;
+  height: 50rpx;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  background-color: rgba(255, 47, 87, 100);
+  color: rgba(255, 255, 255, 100);
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.bottom {
+  position: relative;
+  width: 96%;
+  left: 2%;
+  margin-top: 30rpx;
+  border-radius: 20rpx;
+  background-color: rgba(30, 29, 45, 100);
+}
+
+.list_item {
+  position: relative;
+  margin-top: 10rpx;
+  width: 94%;
+  left: 3%;
+  height: 140rpx;
+  border: 1rpx solid #bbbbbb;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.list_item_top {
+  position: relative;
+  display: flex;
+  margin-bottom: 10rpx;
+}
+
+.list_item_title {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  color: rgba(255, 255, 255, 100);
+  font-size: 28rpx;
+}
+
+.list_item_count {
+  position: absolute;
+  top: 10rpx;
+  right: 60rpx;
+  color: #FF0000;
+  font-size: 32rpx;
+}
+
+.list_item_bottom {
+  position: relative;
+  display: flex;
+}
+
+.list_item_time {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  color: rgba(167, 167, 167, 100);
+  font-size: 28rpx;
+}
+
+.list_item_button {
+  position: absolute;
+  width: 130rpx;
+  height: 50rpx;
+  top: 10rpx;
+  right: 20rpx;
+  border-radius: 10rpx;
+  background-color: rgba(58, 58, 68, 100);
+  color: rgba(255, 255, 255, 100);
+  font-size: 28rpx;
+  text-align: center;
+}
+.kong {
+  position: relative;
+  height: 20rpx;
+}

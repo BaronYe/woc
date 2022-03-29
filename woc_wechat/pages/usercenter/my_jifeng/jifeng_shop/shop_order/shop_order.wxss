@@ -1,0 +1,74 @@
+Page {
+  background-color: #181727;
+  color: white;
+}
+
+.address {
+  position: relative;
+  width: 100%;
+  line-height: 40rpx;
+  background-color: rgba(30, 29, 45, 100);
+}
+
+.top {
+  width: 94%;
+  height: 80rpx;
+  margin-left: 3%;
+  margin-top: 20rpx;
+  display: flex;
+  border: 1rpx solid #bbbbbb;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.dic {
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.dic_content {
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.dic_content_top {
+  display: flex;
+}
+
+.dic_content_bottom {
+  margin-top: 10rpx;
+  color: rgba(157, 158, 157, 100);
+  font-size: 24rpx;
+}
+
+.goods {
+  position: relative;
+  margin-top: 30rpx;
+  width: 100%;
+  line-height: 40rpx;
+  background-color: rgba(30, 29, 45, 100);
+}
+
+.good_content {
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.goods_title {
+  margin-left: 20rpx;
+  width: 450rpx;
+}
+
+.button {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 100rpx;
+  background-color: #FF2F57;
+  text-align: center;
+}

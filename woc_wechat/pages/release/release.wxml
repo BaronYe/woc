@@ -1,0 +1,24 @@
+<view class='page'>
+  <view class="text_content">
+    <textarea class='text' bindinput="input" placeholder="说说你“刺客”的感受" auto-focus="true"
+      style="height: 270rpx;width: 640rpx" maxlength="50" />
+    <view class="huati">
+      <view style="color: rgba(254, 102, 55, 100);margin-left:10rpx;font-size:30rpx;">+</view>
+      <view style="color: rgba(16, 16, 16, 100);font-size: 28rpx;">话题</view>
+    </view>
+  </view>
+  <view class="image_content">
+    <view class='image' wx:for="{{img_url}}">
+      <image class="moment_img" src="{{item}}"></image>
+    </view>
+    <view class='image' style='display:{{hideAdd?"none":"block"}}'>
+      <image bindtap="chooseimage" class="moment_img" src='../../images/add.png'></image>
+    </view>
+  </view>
+  <view class="list_item">
+    <image class="list_item_image" src="../../images/dingwei.png"></image>
+    <text class="list_item_font">地址</text>
+    <text class="list_item_go">南京 新街口</text>
+  </view>
+  <button class="send" bindtap="send">发布</button>
+</view>

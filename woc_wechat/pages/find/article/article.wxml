@@ -1,0 +1,59 @@
+<!--pages/find/article/article.wxml-->
+<view class="contrainer">
+<view style="width:100%;height:410rpx;display:flex; justify-content: center; align-items: center;">
+<image src="{{article.activityImages}}" style=" width:90%;height:400rpx"></image>
+</view>
+<view wx:if="{{article.isCollect==0}}">
+<view class="circle" bindtap="onclickTrue">
+<image src="../../../images/darkStar.png" style="width:34rpx;height:34rpx"></image>
+</view>
+</view>
+<view wx:else>
+<view class="circle" bindtap="onclickFalse" style="background:#FF9900">
+<image src="../../../images/lightStar.png" style="width:34rpx;height:34rpx"></image>
+</view>
+</view>
+
+<view style="width:100%; height:56rpx;font-size: 40rpx;text-align: center;margin-top:50rpx">
+<view>{{article.activityName}}</view>
+
+</view>
+
+<view class="information">
+<view class="item">
+<image src="../../../images/location.png" style="width:36rpx;height:36rpx;margin-left:30rpx"></image>
+<view style="margin-left:20rpx;">位置</view>
+<view style="color:#999999;margin-left:25rpx">{{article.activityAddress}}</view>
+</view>
+<view class="item">
+<image src="../../../images/time.png" style="width:32rpx;height:32rpx;margin-left:30rpx"></image>
+<view style="margin-left:20rpx">时间</view>
+<view style="color:#999999;margin-left:25rpx ">{{article.activityStartTime}}至{{article.activityEndTime}}</view>
+</view>
+<view class="item">
+<image src="../../../images/phone.png"style="width:36rpx;height:36rpx;margin-left:30rpx"></image>
+<view style="margin-left:20rpx">热线</view>
+<view style="color:#999999; margin-left:25rpx">{{article.activityPhone}}</view>
+</view>
+
+</view>
+<view class="mid">
+<view class="mid_item">
+<view>关注人数</view>
+<view style="color:#F44444 ;margin-top:10rpx">{{article.collectNum}}人</view>
+</view>
+<view style="width:2rpx;height:160rpx;background:#BBBBBB ;margin-left: 30rpx;margin-right: 30rpx;"></view>
+<view class="mid_item">
+<view>人均</view>
+<view style="color:#F44444 ;margin-top:10rpx">￥{{article.perCapita}}</view>
+</view>
+</view>
+<view style="width:100%;height:40rpx;text-align: center;font-size: 14px;margin-top:10rpx">
+活动介绍
+</view>
+<view class="article">
+<rich-text nodes="{{article.activityDesc}}" style="width:90%;height:auto"></rich-text>
+</view>
+
+
+</view>

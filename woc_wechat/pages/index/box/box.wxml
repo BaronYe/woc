@@ -1,0 +1,66 @@
+<view class="top">
+  <view class="top_item" style="font-weight:bold">抽盒</view>
+  <view class="top_item" style="color:rgba(153, 153, 153, 100);" bindtap="toshop">盲盒商城</view>
+</view>
+<view class="main">
+  <view style="margin-left:20rpx;font-weight:bold;">新品推荐</view>
+  <scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll" style="width: 100%">
+    <view class="box" bindtap="toboxdetail" wx:for="{{new}}" wx:key="{{new.item.id}}" data-index="{{item.id}}">
+      <image class="box_image" src="{{item.cover}}"></image>
+      <view class="box_bottom">
+        <view class="box_bable">{{item.label}}</view>
+        <view class="box_title">{{item.boxName}}</view>
+        <view class="box_money">￥{{item.price}}</view>
+      </view>
+    </view>
+    <view style="display: inline-block;width:20rpx;height:400rpx"></view>
+  </scroll-view>
+</view>
+<view class="bottom">
+  <view class="tabs">
+    <view class="tab">
+      <!-- 选项卡 -->
+      <block wx:for="{{['泡泡玛特','热血日漫','国朝IP']}}" wx:key="id">
+        <view class="tab_item {{currentTabIndex == index? 'selected' : ''}}" bindtap='onTabItemTap'
+          data-index='{{index}}'>
+          {{item}}
+        </view>
+      </block>
+    </view>
+    <view class="item_detail">
+      <!-- 泡泡玛特 -->
+      <view class="list" hidden="{{currentTabIndex != 0}}">
+        <view class="card" bindtap="toboxdetail" wx:for="{{pao}}" wx:key="{{pao.item.id}}" data-index="{{item.id}}">
+          <image class="card_image" src="{{item.cover}}"></image>
+          <view class="card_title">{{item.boxName}}</view>
+          <view style="display:flex;margin-top:10rpx">
+            <view class="card_bable">{{item.label}}</view>
+            <view class="box_money" style="margin-right:10rpx;">￥{{item.price}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 热血日漫列表 -->
+    <view class="list" hidden="{{currentTabIndex != 1}}">
+      <view class="card" bindtap="toboxdetail" wx:for="{{ri}}" wx:key="{{ri.item.id}}" data-index="{{item.id}}">
+        <image class="card_image" src="{{item.cover}}"></image>
+        <view class="card_title">{{item.boxName}}</view>
+        <view style="display:flex;margin-top:10rpx">
+          <view class="card_bable">{{item.label}}</view>
+          <view class="box_money" style="margin-right:10rpx;">￥{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 国潮IP列表 -->
+    <view class="list" hidden="{{currentTabIndex != 2}}">
+      <view class="card" bindtap="toboxdetail" wx:for="{{guo}}" wx:key="{{guo.item.id}}" data-index="{{item.id}}">
+        <image class="card_image" src="{{item.cover}}"></image>
+        <view class="card_title">{{item.boxName}}</view>
+        <view style="display:flex;margin-top:10rpx">
+          <view class="card_bable">{{item.label}}</view>
+          <view class="box_money" style="margin-right:10rpx;">￥{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

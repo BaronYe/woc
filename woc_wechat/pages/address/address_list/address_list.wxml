@@ -1,0 +1,33 @@
+<radio-group bindchange="radioChange" style="top:20rpx">
+  <label class="address" wx:for="{{adlist}}" wx:key="{{adlist.item.id}}" data-index="{{item.id}}"
+    bindlongpress="detail">
+    <radio wx:if="{{item.isDefault > 0}}" style="margin-left:20rpx;margin-top:20rpx;" color="#F44444" value="{{item.id}}" checked="true" />
+    <radio wx:elif="{{item.isDefault < 1}}" style="margin-left:20rpx;margin-top:20rpx;" color="#F44444" value="{{item.id}}" checked="" />
+    <view class="dic_content">
+      <view class="dic_content_top">
+        <view>{{item.name}}</view>
+        <view style="margin-left:20rpx">{{item.mobile}}</view>
+      </view>
+      <view class="dic_content_bottom">{{item.province}} {{item.city}} {{item.region}} {{item.detailed}}</view>
+    </view>
+    <image class="bianji" src="../../../images/mine/bianji.png" bindtap="edit" data-index="{{item.id}}"></image>
+  </label>
+</radio-group>
+
+<view class="button" bindtap="todingdan">
+  <view class="button_item" bindtap="add">
+    <view style="padding-top:24rpx">
+      获取微信收货地址</view>
+  </view>
+  <view class="button_item" bindtap="send">
+    <view style="padding-top:24rpx">
+      确认地址</view>
+  </view>
+</view>
+
+<!-- 商品详情 -->
+<view class="shadow" wx:if="{{show}}" bindtap='hideModal'></view>
+<view class='choosen1' wx:if="{{show}}" animation='{{animationData}}' bindtap="delete">
+  <!-- 内容 -->
+  <view class="del">删除</view>
+</view>

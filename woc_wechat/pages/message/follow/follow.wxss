@@ -1,0 +1,99 @@
+page {
+  background-color: #181727;
+  color: white;
+}
+
+.tab {
+  width: 100%;
+  display: flex;
+  height: 100rpx;
+  background-color: #1E1D2D 100%;
+}
+
+.tab_item {
+  width: 30%;
+  margin-top: 20rpx;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: rgba(255, 255, 255, 100);
+  font-size: 34rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.selected {
+  border: 10rpx solid #f44444;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.item_detail {
+  position: relative;
+  margin-top: 20rpx;
+  border: 1rpx solid #BBBBBB;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+
+.list_item {
+  position: relative;
+  display: flex;
+  width: 90%;
+  height: 150rpx;
+  left: 5%;
+  border: 1rpx solid #BBBBBB;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+
+.list_item_image {
+  width: 90rpx;
+  height: 90rpx;
+  margin-left: 10rpx;
+  margin-top: 30rpx;
+}
+
+.list_item_font {
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+  width: 200rpx;
+  color: rgba(255, 255, 255, 100);
+}
+
+.list_item_font1 {
+  color: rgba(255, 255, 255, 100);
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+
+.list_item_font2 {
+  color: rgba(153, 153, 153, 100);
+  font-size: 28rpx;
+  margin-top: 8rpx;
+}
+
+.list_item_time {
+  position: relative;
+  left: 20rpx;
+  width: 140rpx;
+  height: 40rpx;
+  top: 30rpx;
+  color: rgba(153, 153, 153, 100);
+  text-align: right;
+}
+
+.guanzhu {
+  position: relative;
+  left: 100rpx;
+  top: 50rpx;
+  width: 120rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  background-color: rgba(255, 47, 87, 100);
+  color: rgba(255, 255, 255, 100);
+  text-align: center;
+}

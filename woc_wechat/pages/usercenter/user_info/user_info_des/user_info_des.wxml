@@ -1,0 +1,6 @@
+<form bindsubmit="formSubmit">
+  <view class="input_containt">
+    <textarea name="input" class="input" maxlength="30" placeholder="{{userInfo.userDesc}}" wrap="hard" />
+  </view>
+  <button class="save" type="warn" formType="submit">保存</button>
+</form>

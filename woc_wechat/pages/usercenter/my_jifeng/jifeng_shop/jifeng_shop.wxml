@@ -1,0 +1,29 @@
+<view class="tabs">
+  <view class="tab">
+    <!-- 选项卡 -->
+    <block wx:for="{{tab}}" wx:key="id">
+      <view class="tab_item {{currentTabIndex == index? 'selected' : ''}}" bindtap='onTabItemTap'
+        data-index='{{index}}'>
+        {{item}}
+      </view>
+    </block>
+  </view>
+  <view class="item_detail">
+    <!-- 全部 -->
+    <view class="list" hidden="{{currentTabIndex != 0}}" wx:for="{{goods}}" wx:key="{{goods.item.id}}">
+      <view class="card" bindtap="todetail" data-index="{{item.id}}">
+        <image class="img" src="{{item.item.imgs[0]}}"></image>
+        <view class="detail">
+          <view class="title">{{item.item.title}}</view>
+          <view class="jifeng">
+            <view class="font">{{item.totalCount}}分</view>
+            <view class="count">已售{{item.sales}}件</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 粉丝列表 -->
+  <view class="list" hidden="{{currentTabIndex != 1}}">
+  </view>
+</view>

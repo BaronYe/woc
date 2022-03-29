@@ -1,0 +1,77 @@
+page {
+  background-color: #181727;
+  color: white;
+}
+
+.list{
+  position: relative;
+  margin-top: 20rpx;
+}
+
+.list_item {
+  position: relative;
+  display: flex;
+  width: 90%;
+  height: 150rpx;
+  left: 5%;
+  border: 1rpx solid #BBBBBB;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+
+.list_item_image {
+  position: relative;
+  width: 90rpx;
+  height: 90rpx;
+  margin-left: 10rpx;
+  margin-top: 30rpx;
+}
+
+.list_item_font {
+  position: relative;
+  width: 100rpx;
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+  color: rgba(255, 255, 255, 100);
+}
+
+.list_item_font1 {
+  color: rgba(255, 255, 255, 100);
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+
+.list_item_time {
+  color: rgba(153, 153, 153, 100);
+  font-size: 23rpx;
+  margin-top: 15rpx;
+}
+
+.list_item_font2 {
+  position: relative;
+  margin-top: 5rpx;
+  font-size: 28rpx;
+  height: 40rpx;
+  top: 30rpx;
+  color: rgba(153, 153, 153, 100);
+  text-align: left;
+}
+
+.list_item_font3 {
+  position: relative;
+  margin-left: 10rpx;
+  margin-top: 5rpx;
+  font-size: 28rpx;
+  height: 40rpx;
+  top: 30rpx;
+  text-align: left;
+}
+
+.dongtai {
+  position: absolute;
+  right: 10rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+}

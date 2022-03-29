@@ -1,0 +1,114 @@
+<!--pages/search/search.wxml-->
+<view class="contraner">
+  <view class="search">
+    <image src="../../images/search.png" class="image_search"></image>
+    <input placeholder="快速搜索" class="search_input" bindinput="search" value="{{search_value}}"></input>
+    <view class="submit" bindtap="query">
+      <view>搜索</view>
+    </view>
+  </view>
+</view>
+<view class="userClick">
+  <view bindtap="change_shop">商家</view>
+  <view bindtap="change_activity">活动</view>
+  <view bindtap="change_user">用户</view>
+</view>
+<view class="line">
+  <view wx:if="{{sign_shop==true}}">
+    <view style="width: 41px;height:6rpx;background:#FF0000;margin-top: 20rpx; "></view>
+  </view>
+  <view wx:else>
+    <view style="width: 41px;height:6rpx;background:#000;margin-top: 20rpx; "></view>
+  </view>
+  <view wx:if="{{sign_activity==true}}">
+    <view style="width: 41px;height:6rpx;background:#FF0000;margin-top: 20rpx; "></view>
+  </view>
+  <view wx:else>
+    <view style="width: 41px;height:6rpx;background:#000;margin-top: 20rpx; "></view>
+  </view>
+  <view wx:if="{{sign_user==true}}">
+    <view style="width: 41px;height:6rpx;background:#FF0000;margin-top: 20rpx; "></view>
+  </view>
+  <view wx:else>
+    <view style="width: 41px;height:6rpx;background:#000;margin-top: 20rpx; "></view>
+  </view>
+</view>
+<view class="object">
+
+  <scroll-view>
+    <view wx:if="{{sign_shop==true}}">
+      <view wx:for="{{shop}}" wx:for-index='key'>
+        <view class="item" id="{{key}}" bindtap="gotoDetail">
+          <image src="{{item.image}}" style="width:220rpx;height:160rpx;border-radius: 5rpx;margin-left:20rpx"></image>
+          <view class="item_left">
+            <view style="color:#fff;margin-top:10rpx;margin-left: 25rpx;">{{item.name}}</view>
+            <view class="text_image" style="margin-left: 22rpx;margin-top: 6rpx;">
+              <image src="../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+              <image src="../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+              <image src="../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+              <image src="../../images/fire.png" style="width: 30rpx;height: 30rpx;margin-top:5rpx"></image>
+              <view style="color:#999998;width:auto;height:34rpx">￥{{item.moods}}/人</view>
+            </view>
+            <view style="color:#999998;width:auto;height:34rpx;font-size: 24rpx;margin-left: 25rpx; margin-top: 8rpx;">
+              {{item.startTime}} 至 {{item.endTime}} 开放</view>
+            <view style="color:#F44444 ;font-size: 12px;;margin-left: 25rpx; margin-top: 6rpx;">{{item.address}}</view>
+            <view style="height:2rpx;background-color:#F5F5F5 ;width:440rpx;;margin-left: 25rpx; margin-top: 15rpx;">
+            </view>
+          </view>
+          <view class="love">
+            <image src="../../images/mine/colloct_on.png" style="width:75rpx;height:75rpx"></image>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </scroll-view>
+  <view wx:if='{{sign_activity==true}}'>
+    <scroll-view>
+      <view class="item-new">
+        <view wx:for="{{activity}}" wx:for-item="item" wx:key="index">
+          <view class="item1" bindtap="gotoDetail">
+            <view style="position: relative;">
+              <image src="{{item.activityImages}}" class="image"> </image>
+              <view class="topic">
+                <view>{{item.label}}</view>
+              </view>
+            </view>
+                <view class="right_item">
+                        <view style="font-size:32rpx;color:#fff;white-space:pre-wrap;width: 280rpx;">
+                {{item.activityName}}</view>
+              <view style="font-size:28rpx;color:#B7B6B6 ;margin-top: 30rpx;">{{item.activityStartTime}}</view>
+                         
+                         
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+
+    </scroll-view>
+  </view>
+  <view wx:if='{{sign_user==true}}'>
+    <view class="list" wx:for="{{user}}" item-index="{{key}}">
+      <view class="list_item">
+        <image class="list_item_image" src="{{item.avatar}}"></image>
+        <view class="list_item_font">
+          <view class="list_item_font1">{{item.nickname}}</view>
+          <view class="list_item_font2">{{item.userDesc}}</view>
+        </view>
+        <wxs module="filter" src="../../utils/filter.wxs"></wxs>
+
+
+        <view class="guanzhu" bindtap="cancle" id="{{item.id}}">
+          <view style="margin-top:10rpx">关注</view>
+        </view>
+
+
+      </view>
+
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,5 @@
+<view class="card" wx:for="{{notice}}">
+  <view class="title">{{item.title}}</view>
+  <view class="time">2021-4-20</view>
+  <view class="content">{{item.content}}</view>
+</view>

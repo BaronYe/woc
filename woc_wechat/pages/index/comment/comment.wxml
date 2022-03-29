@@ -1,0 +1,133 @@
+
+<!--pages/index/comment/comment.wxml-->
+
+<swiper indicator-dots="{{indicatorDots}}" class="swipe"
+        autoplay="{{autoplay}}" 
+        circular="{{circular}}" 
+        vertical="{{vertical}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}" 
+        previous-margin="{{previousMargin}}px" 
+        next-margin="{{nextMargin}}px">
+    
+    <block wx:for='{{details.imgs}}' wx:key='index'>
+      <swiper-item>
+        <image src='{{item}}' mode='aspectFill' class='swiper-item-images'/>
+      </swiper-item>
+    </block>
+</swiper>
+<view class="head">
+ <image src="{{details.users.avatar}}" class="user_image"></image>
+    <view style="font-size:27rpx ; color: #FFFFFF  ;padding-left: 50rpx;">{{details.users.nickname}}</view>
+     <view   wx:if="{{details.isFollow==0}}"  class="follow_button" id="{{details.userId}}"  bindtap="changeFoller" data-tid="{{key}}" >
+                <view  >关注</view>
+              </view>
+              <view wx:else class="follow_button" bindtap="changeFoller"
+                style="border: 1px solid #D5D5D5;color: #AAAAAA;" id="{{details.userId}}" data-tid="{{key}}">
+                <view>已关注</view>
+
+              </view>
+            
+</view>
+<view class="body">
+<textarea class="textarea">{{details.content}} </textarea>
+<view class="body_middle">
+<view style="font-size: 14px;color:#4A65C3 ;margin-right: 50rpx;">{{details.address}}</view>
+<view style="font-size: 12px;color:#A9ABAE;margin-left:50rpx "> {{details.createTime}}</view>
+</view>
+</view>
+
+<view class="tail" >
+              <view class="tail_button" >
+                <image src="../../../images/zhuanfa.png" style="width:40rpx;height:40rpx;"></image>
+
+              </view>
+              <view  class="tail_button" bindtap="goto_Comment" id="{{item.id}}" >
+                <image src="../../../images/liaotian.png" style="width:50rpx;height:50rpx;"></image>
+                <view style="font-size:20rpz;color:#A9ABAE ">{{details.commentCount}}</view>
+
+              </view>
+              <view class="tail_button" bindtap="zan" id="{{item.id}}">
+                <image src="../../../images/dianzan.png" style="width:60rpx;height:60rpx;"></image>
+                <view style="font-size:20rpz;color:#A9ABAE ">{{details.zanCount}}</view>
+              </view>
+            </view>
+       
+          <scroll-view style="height:auto;margin-bottom: 200rpx;" >
+<block wx:for="{{commentList}}"  wx:for-index='id'>
+ 
+<!-- item -->
+ <view  class="comment_item">
+ <image src="{{item.users.avatar}}" class="user_avatar"></image>
+ <!-- right -->
+ <view class="right_item">
+ 
+ <view style="font-size: 25rpx;color:#A9ABAE">{{item.users.nickname}}</view>
+ <view style="margin-top:20rpx">{{item.content}}</view>
+ <!-- buttom -->
+ <view class="buttom_item">
+ <view style="color:#D5D5D5;font-size: 25rpx;">{{item.createTime}}</view>
+ <view  style="color:#A9ABAE ;margin-left: 15rpx;" bindtap="replayFather" id="{{item.id}}">回复</view>
+ </view>
+ <view bindtap="open" id="{{id}}" style="margin-top: 10rpx">展开{{item.commentCount}}条回复</view>
+ <!-- child -->
+<view wx:if="{{item.isOpen&&item.commentList!=null}}">
+<block wx:for="{{item.commentList}}"  wx:for-item="child" wx:for-index='key'>
+
+<!-- child_item -->
+<view class="child_comment">
+<image src="{{child.users.avatar}}" class="child_user_avatar"></image>
+<view class="child_right_item">
+<view style="font-size: 25rpx;color:#A9ABAE">{{child.users.nickname}}</view>
+ <view style="margin-top:20rpx">{{child.content}}</view>
+  <!--child_buttom -->
+ <view class="buttom_item">
+ <view style="color:#D5D5D5;font-size: 25rpx;">{{child.createTime}}</view>
+ <view  style="color:#A9ABAE ;margin-left: 15rpx;" bindtap="replaySon" id="{{child.userId}}" data-tid="{{item.id}}">回复</view>
+ </view>
+ 
+ <!-- child start -->
+
+</view>
+<!-- right -->
+</view>
+<!-- child_item -->
+
+</block>
+<view wx:if="{{item.isOpen==true}}">
+<view bindtap="close" id="{{id}}" style="margin-top: 10rpx">收起</view>
+</view>
+</view>
+ <!-- buttom -->
+ <!-- <view wx:if="{{}}"></view> -->
+ 
+ </view>
+ <!-- right -->
+ <view wx:if="{{item.isZan==0}}">
+ <view class="star">
+ <image src="../../../images/greyStar.png" class="star_image"  bindtap="dianzan" id="{{item.id}}"></image>
+ <view style="margin-left:10rpx">{{item.zanCount}}</view>
+ </view>
+ </view>
+ <view wx:else>
+  <view class="star">
+ <image src="../../../images/lightStar.png" class="star_image"  bindtap="dianzan" id="{{item.id}}"></image>
+ <view style="margin-left:10rpx">{{item.zanCount}}</view>
+ </view>
+ </view>
+ </view>
+ <!-- item -->
+</block> 
+</scroll-view>
+      
+
+<view class="fix_buttom">
+
+<input class="input"  bindinput="search"  value="{{search_value}}" type="text" placeholder="留下你精彩的评论吧" placeholder-style="margin-left:10rpx">
+ <view class="submit" bindtap="publish">
+    <view>发表</view>
+    </view>
+</input>
+
+</view>
+

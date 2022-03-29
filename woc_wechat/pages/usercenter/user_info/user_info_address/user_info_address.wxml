@@ -1,0 +1,51 @@
+<form>
+  <view class="list">
+    <view class="list_item">
+      <view class="list_item_font">
+        收货人姓名
+      </view>
+      <view class="list_item_info">
+        {{ addressInfo.userName }}
+      </view>
+    </view>
+    <view class="list_item">
+      <view class="list_item_font">
+        邮政邮编
+      </view>
+      <view class="list_item_info">
+        {{ addressInfo.postalCode }}
+      </view>
+    </view>
+    <view class="list_item">
+      <view class="list_item_font">
+        地区
+      </view>
+      <view class="list_item_info">
+        {{ addressInfo.provinceName }}
+        {{ addressInfo.cityName }}
+        {{ addressInfo.countyName }}
+      </view>
+    </view>
+    <view class="list_item">
+      <view class="list_item_font">
+        收货地址
+      </view>
+      <view class="list_item_info">
+        {{ addressInfo.detailInfo }}
+      </view>
+    </view>
+    <view class="list_item">
+      <view class="list_item_font">
+        手机号码
+      </view>
+      <view class="list_item_info">
+        {{ addressInfo.telNumber }}
+      </view>
+    </view>
+  </view>
+</form>
+
+<view class="btn-area">
+  <button class="get_button" size="default" bindtap="chooseAddress">获取收货地址</button>
+  <button class="get_button" size="default" bindtap="saveAddress">保存地址</button>
+</view>
