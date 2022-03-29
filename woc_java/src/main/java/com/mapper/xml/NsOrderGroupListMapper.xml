@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.NsOrderGroupListMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.entity.NsOrderGroupList">
+        <id column="id" property="id" />
+        <result column="state" property="state" />
+        <result column="num" property="num" />
+        <result column="remain_num" property="remainNum" />
+        <result column="main_id" property="mainId" />
+        <result column="create_time" property="createTime" />
+        <result column="from_id" property="fromId" />
+        <result column="box_id" property="boxId" />
+        <result column="is_delete" property="isDelete" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, state, num, remain_num, main_id, create_time, from_id, box_id, is_delete
+    </sql>
+
+</mapper>

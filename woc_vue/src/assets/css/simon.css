@@ -1,0 +1,34 @@
+.ml-auto{
+  margin-left: auto !important;
+}
+.d-flex{
+  display: flex !important;
+}
+.ai-center{
+  align-items: center;
+}
+.fs-16{
+  font-size: 16px;
+}
+
+.cp{
+  cursor: pointer;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+.s-button{
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 12px;
+  line-height: 2 !important;
+  height: auto;
+  display: inline-block;
+  border: 1px solid #C9C9C9;
+  background-color: #fff;
+  color: #555;
+  border-radius: 2px;
+  margin-right: 12px;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.NsOrderSellOrderAddressMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.entity.NsOrderSellOrderAddress">
+        <id column="id" property="id" />
+        <result column="address_id" property="addressId" />
+        <result column="sell_order_id" property="sellOrderId" />
+        <result column="user_id" property="userId" />
+        <result column="receiver_mobile" property="receiverMobile" />
+        <result column="receiver_province" property="receiverProvince" />
+        <result column="receiver_city" property="receiverCity" />
+        <result column="receiver_region" property="receiverRegion" />
+        <result column="receiver_detailed" property="receiverDetailed" />
+        <result column="receiver_zip" property="receiverZip" />
+        <result column="receiver_name" property="receiverName" />
+        <result column="is_delete" property="isDelete" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, address_id, sell_order_id, user_id, receiver_mobile, receiver_province, receiver_city, receiver_region, receiver_detailed, receiver_zip, receiver_name, is_delete, create_time
+    </sql>
+
+</mapper>

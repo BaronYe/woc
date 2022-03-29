@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.ItemMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.entity.Item">
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="price" property="price" />
+        <result column="types" property="types" />
+        <result column="special_price" property="specialPrice" />
+        <result column="text" property="text" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="cid" property="cid" />
+        <result column="son_cid" property="sonCid" />
+        <result column="is_delete" property="isDelete" />
+        <result column="stock" property="stock" />
+        <result column="sales" property="sales" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, title, price, types, special_price, text, create_time, update_time, cid, son_cid, is_delete, stock, sales
+    </sql>
+
+</mapper>

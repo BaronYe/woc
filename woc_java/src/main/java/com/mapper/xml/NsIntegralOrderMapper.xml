@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.NsIntegralOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.entity.NsIntegralOrder">
+        <id column="id" property="id" />
+        <result column="integral_goods_id" property="integralGoodsId" />
+        <result column="integral_goods_name" property="integralGoodsName" />
+        <result column="integral_goods_picture" property="integralGoodsPicture" />
+        <result column="user_id" property="userId" />
+        <result column="order_no" property="orderNo" />
+        <result column="point" property="point" />
+        <result column="order_status" property="orderStatus" />
+        <result column="shipping_status" property="shippingStatus" />
+        <result column="shipping_com" property="shippingCom" />
+        <result column="shipping_express" property="shippingExpress" />
+        <result column="create_time" property="createTime" />
+        <result column="is_delete" property="isDelete" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, integral_goods_id, integral_goods_name, integral_goods_picture, user_id, order_no, point, order_status, shipping_status, shipping_com, shipping_express, create_time, is_delete
+    </sql>
+
+</mapper>

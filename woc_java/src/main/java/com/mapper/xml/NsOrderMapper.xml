@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.NsOrderMapper">
+
+    <select id="getNsOrderCountList"  resultType="java.util.Map">
+        SELECT a.item,IFNULL(b.value,0) AS value
+
+        FROM (
+
+            SELECT CURDATE() AS item
+
+            UNION ALL
+
+            SELECT DATE_SUB(CURDATE(), INTERVAL 1 DAY) AS item
+
+            UNION ALL
+
+            SELECT DATE_SUB(CURDATE(), INTERVAL 2 DAY) AS item
+
+            UNION ALL
+
+            SELECT DATE_SUB(CURDATE(), INTERVAL 3 DAY) AS item
+
+            UNION ALL
+
+            SELECT DATE_SUB(CURDATE(), INTERVAL 4 DAY) AS item
+
+            UNION ALL
+
+            SELECT DATE_SUB(CURDATE(), INTERVAL 5 DAY) AS item
+
+            UNION ALL
+
+            SELECT DATE_SUB(CURDATE(), INTERVAL 6 DAY) AS item
+
+            ) a LEFT JOIN (
+
+            SELECT DATE(create_time) AS date, count(date_format(create_time,'%Y-%m-%d')) AS value
+
+            FROM `ns_order`
+
+            GROUP BY DATE(create_time)
+
+            ) b ON a.item = b.date ORDER BY a.item DESC;
+    </select>
+</mapper>

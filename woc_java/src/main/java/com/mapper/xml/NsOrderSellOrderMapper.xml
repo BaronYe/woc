@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.NsOrderSellOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.entity.NsOrderSellOrder">
+        <id column="id" property="id" />
+        <result column="sell_id" property="sellId" />
+        <result column="ns_order_id" property="nsOrderId" />
+        <result column="user_id" property="userId" />
+        <result column="box_id" property="boxId" />
+        <result column="order_no" property="orderNo" />
+        <result column="payment_type" property="paymentType" />
+        <result column="order_money" property="orderMoney" />
+        <result column="point" property="point" />
+        <result column="order_status" property="orderStatus" />
+        <result column="pay_status" property="payStatus" />
+        <result column="shipping_status" property="shippingStatus" />
+        <result column="shipping_com" property="shippingCom" />
+        <result column="shipping_express" property="shippingExpress" />
+        <result column="pay_time" property="payTime" />
+        <result column="create_time" property="createTime" />
+        <result column="transaction_id" property="transactionId" />
+        <result column="is_delete" property="isDelete" />
+        <result column="box_name" property="boxName" />
+        <result column="box_picture" property="boxPicture" />
+        <result column="box_num" property="boxNum" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, sell_id, ns_order_id, user_id, box_id, order_no, payment_type, order_money, point, order_status, pay_status, shipping_status, shipping_com, shipping_express, pay_time, create_time, transaction_id, is_delete, box_name, box_picture, box_num
+    </sql>
+
+</mapper>

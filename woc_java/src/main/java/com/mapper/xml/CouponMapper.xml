@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.CouponMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.entity.Coupon">
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="types" property="types" />
+        <result column="coupon_price" property="couponPrice" />
+        <result column="discount" property="discount" />
+        <result column="coupon_status" property="couponStatus" />
+        <result column="total_count" property="totalCount" />
+        <result column="use_min_price" property="useMinPrice" />
+        <result column="time_status" property="timeStatus" />
+        <result column="coupon_time" property="couponTime" />
+        <result column="coupon_days" property="couponDays" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="shop_status" property="shopStatus" />
+        <result column="shop_id" property="shopId" />
+        <result column="is_delete" property="isDelete" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, title, types, coupon_price, discount, coupon_status, total_count, use_min_price, time_status, coupon_time, coupon_days, start_time, end_time, shop_status, shop_id, is_delete, create_time
+    </sql>
+
+</mapper>

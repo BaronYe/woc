@@ -1,0 +1,43 @@
+{
+  "name": "vue-manage-system",
+  "version": "4.2.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "build:preview": "vue-cli-service build --mode preview",
+    "lint:nofix": "vue-cli-service lint --no-fix",
+    "postinstall": "opencollective-postinstall"
+  },
+  "dependencies": {
+    "axios": "^0.18.1",
+    "babel-polyfill": "^6.26.0",
+    "echarts": "^5.1.2",
+    "echarts-liquidfill": "^2.0.6",
+    "element-ui": "^2.11.0",
+    "js-md5": "^0.7.3",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.1",
+    "mavon-editor": "^2.6.17",
+    "sass-loader": "^10.0.2",
+    "v-charts": "^1.19.0",
+    "vant": "^2.12.0",
+    "vue": "^2.6.10",
+    "vue-cropperjs": "^3.0.0",
+    "vue-i18n": "^8.10.0",
+    "vue-quill-editor": "^3.0.6",
+    "vue-router": "^3.0.3",
+    "vue-schart": "^2.0.0",
+    "vuedraggable": "^2.17.0",
+    "vuex": "^3.6.2",
+    "vuex-persistedstate": "^4.0.0-beta.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "vue-particles": "^1.0.9",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

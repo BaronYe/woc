@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.CouponWriteOffMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.entity.CouponWriteOff">
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="coupon_code" property="couponCode" />
+        <result column="types" property="types" />
+        <result column="create_time" property="createTime" />
+        <result column="user_coupon_id" property="userCouponId" />
+        <result column="coupon_id" property="couponId" />
+        <result column="user_id" property="userId" />
+        <result column="money" property="money" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, title, coupon_code, types, create_time, user_coupon_id, coupon_id, user_id, money
+    </sql>
+
+</mapper>
