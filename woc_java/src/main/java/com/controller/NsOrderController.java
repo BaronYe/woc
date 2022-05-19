@@ -16,7 +16,7 @@ import com.util.Util;
 import com.util.pay.WxPay;
 import com.util.pay.WxPayConfiguration;
 import com.vo.MyException;
-import jdk.nashorn.internal.runtime.regexp.joni.Config;
+//import jdk.nashorn.internal.runtime.regexp.joni.Config;
 import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
